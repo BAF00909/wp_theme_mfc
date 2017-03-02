@@ -1,5 +1,5 @@
 /*
-Theme Name: Test
+Theme Name: mfc
 */
 
 body {
@@ -77,6 +77,35 @@ p {
 .page-header-nav {
     margin-bottom: 30px;
 }
+#main-menu .menu-item {
+    display: inline-block;
+    position: relative;
+}
+#main-menu .menu-item a{
+    display: block;
+    color: #c39367;
+    text-decoration: underline;
+    font: 400 16px/28px Arial;
+    line-height: 30px;
+    font-weight: normal;
+}
+#main-menu .menu-item a:hover {
+    color: #000;
+}
+
+#main-menu .menu-item:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -18px;
+    top: 4px;
+    height: 22px;
+    width: 2px;
+    background-color: #c39367;
+}
+#main-menu .menu-item:last-child:after {
+    display: none;
+}
 .v-menu,
 .h-menu,
 .schedule{
@@ -93,18 +122,19 @@ p {
 .menu-item:last-child{
     margin-right: 0;
 }
+.menu .menu-item {
+    line-height: 24px;
+    margin-bottom: 10px;
+}
 .menu-item a {
-    display: block;
-    padding: 3px 12px;
-    background: #f26649;
-    color: #fff;
-    text-decoration: none;
-    font-size: 13px;
+    color: #c39367;
+    text-decoration: underline;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: normal;
 }
 .menu-item a:hover {
-    text-decoration: none;
-    background-color: #782d19;
-    color: #fff;
+    color: #000;
 }
 .title-text {
     font-size: 18px;
@@ -155,11 +185,6 @@ p {
     border-radius: 15px;
     padding: 10px;
 }
-.page-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
 .bg-brown {
     background: #69321f;
     padding: 20px 58px 20px 20px;
@@ -204,12 +229,20 @@ p {
     color: #d99668;
     text-decoration: underline;
 }
-.page-footer__item .page-footer__mail {
+.page-footer .page-footer__mail {
+    display: block;
     margin-bottom: 15px;
+    color: #fff;
+    text-decoration: underline;
 }
-.page-footer__item .page-footer__phone {
+.page-footer .page-footer__phone {
+    display: block;
     font-size: 22px;
-
+    color: #fff;
+}
+.page-footer p {
+    color: #d99668;
+    margin-bottom: 18px;
 }
 .page-footer__searchform {
     position: relative;
@@ -229,7 +262,7 @@ p {
     position: absolute;
     background: url(./images/magnifying-glass.png);
     border: none;
-    right: 30px;
+    right: 75px;
     top: 6px;
     cursor: pointer;
     width: 16px;
@@ -252,7 +285,10 @@ p {
 }
 .social-menu {
     text-align: right;
-    padding-right: 22px;
+    padding-right: 75px;
+}
+.news {
+    margin-bottom: 30px;
 }
 .news__date {
     font-size: 12px;
@@ -272,6 +308,52 @@ p {
 .active {
     display: block;
 }
+
+.btn_all-news {
+    color: #623b2a;
+    font-style: italic;
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    display: block;
+}
+.btn_all-news:hover {
+    color: #623b2a;
+}
+.bg-brown {
+    background-color: #68412f;
+}
+
+.footer-info,
+.confident-link{
+    color: #fff;
+    text-decoration: underline;
+}
+.page-footer .footer-info,
+.page-footer .confident-link{
+    color: #fff;
+}
+
+.content-list {
+    padding: 0;
+    margin: 0;
+}
+.content-list .content-list__item a {
+    color: #c39367;
+    text-decoration: underline;
+}
+.days-work {
+    display: block;
+    width: 25%;
+    float: left;
+}
+.time-work {
+    display: block;
+    width: 75%;
+    float: left;
+}
+
 @media only screen and (max-width: 375px) {
     .logo-link {
         margin: 24px 0 0 100px;
@@ -327,6 +409,7 @@ p {
 /*accordion*/
 .mini-menu .menu-item {
     margin-right: 0;
+    display: block;
 }
 #menu-sidebar li{
     display: block;
@@ -466,16 +549,21 @@ p {
 .sli-links .control-slide{
     margin:2px;
     display:inline-block;
-    width:16px;
-    height:16px;
+    width:14px;
+    height:14px;
     overflow:hidden;
     text-indent:-9999px;
-    background:url(./images/radioBg.png) center bottom no-repeat;}
+    background-color: #69321f;
+}
 .sli-links .control-slide:hover{
     cursor:pointer;
     background-position:center center;}
 .sli-links .control-slide.active{
-    background-position:center top;}
+    width:14px;
+    height:14px;
+    background-color: white;
+    border: 2px solid #69321f;
+}
 #prewbutton, #nextbutton{
     display:block;
     width:15px;

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-<section class="page-content clearfix">
-    <div class="container">
+<section class="page-content">
+    <div class="container clearfix">
         <div class="row">
             <div class="col-md-3">
 
@@ -16,69 +16,7 @@
                     </div>
 
                 <?php endif; ?>
-                
 
-                <div class="sidebar__contacts">
-                    <p class="title-block">Контакты центрального филиала</p>
-                    <p class="contacts">
-                        394026, г. Воронеж
-                        ул. Дружинников, д. 3Б (ост.Политехнический институт)
-                        Тел./факс: <a href="tel: 8 (473) 226-99-99">8 (473) 226-99-99</a>
-                        Эл. почта: <a href="mailto: mfc@govvrn.ru">mfc@govvrn.ru</a>
-                        Филиалы АУ "МФЦ" на карте
-                    </p>
-                </div>
-
-                <div class="sidebar__contacts">
-                    <p class="title-block">Часы работы центрального филиала</p>
-                    <ul class="schedule clearfix">
-                        <li class="schedule__item">
-                            <span class="schedule__day">Понедельник</span> <span class="schedule__time">09:00 - 18:00</span>
-                        </li>
-                        <li class="schedule__item">
-                            <span class="schedule__day">Вторник</span> <span class="schedule__time">09:00 - 20:00</span>
-                        </li>
-                        <li class="schedule__item">
-                            <span class="schedule__day">Среда</span> <span class="schedule__time">09:00 - 20:00</span>
-                        </li>
-                        <li class="schedule__item">
-                            <span class="schedule__day">Четверг</span> <span class="schedule__time">09:00 - 20:00</span>
-                        </li>
-                        <li class="schedule__item">
-                            <span class="schedule__day">Пятница</span> <span class="schedule__time">09:00 - 20:00</span>
-                        </li>
-                        <li class="schedule__item">
-                            <span class="schedule__day">Суббота</span> <span class="schedule__time">09:00 - 16:45</span>
-                        </li>
-                        <li class="schedule__item">
-                            <span class="schedule__day">Воскресенье</span> <span class="schedule__time">Выходной</span>
-                        </li>
-                    </ul>
-
-                    <p class="sidebar-text">Время работы ближайшего филиала уточняйте в соответствующем <a href="#">разделе</a></p>
-                    <p class="sidebar-text">Планируя свой визит, уточняйте время работы специалистов по телефону горячей линии.</p>
-                </div>
-
-                <div class="sidebar__contacts">
-                    <p class="title-block">Интерактивная карта Воронежской области</p>
-                    <a href="#" class="sidebar__map">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/map-preview.png" alt="карта">
-                    </a>
-                </div>
-
-                <div class="sidebar__contacts">
-                    <p class="title-block">Как получить услугу в МФЦ</p>
-                    <a href="#" class="sidebar__map">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/KakPoluchitUslugu3.jpg" alt="Как получить услугу в МФЦ">
-                    </a>
-                </div>
-
-                <div class="sidebar__contacts">
-                    <p class="title-block">Узнать задолжность ФНС</p>
-                    <a href="#" class="sidebar__map">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/uznat_zadolzhennost.gif" alt="Узнать задолжность ФНС">
-                    </a>
-                </div>
 
             </div>
             <div class="col-md-9">
@@ -101,30 +39,28 @@
                                     <img src="<?php bloginfo('template_directory'); ?>/images/sl2.png"  height="480">
                                 </div>
                             </div>
-                            <!--   <div class="sli-links">
-                                 <span class="control-slide">0</span>
-                                  <span class="control-slide">1</span>
-                                  <span class="control-slide">2</span>
-                                  <span class="control-slide active">3</span>
-                            </div> -->
                         </div>
 
                     </header>
                     <section class="main-content">
 
-                        <div class="row">
-                            <div class="col-md-12"><a href="http://fz.pautino.ru/Force/?cat=4">Все новости</a></div>
+                        <div class="row clearfix">
+                            <?php $catID = get_cat_ID( 'Новости' ); ?>
+                            <div class="col-md-12"><a href="<?php echo get_category_link( $catID ); ?>" class="btn_all-news">Все новости</a></div>
                         </div>
 
-                        <div class="row">
+                        <div class="row clearfix">
 
-                            <?php query_posts('category_name=Новости'); ?>
+
+
+                            <?php query_posts('category_name=Новости&showposts=3'); ?>
+
                             <?php if (have_posts()) : ?>
                                 <?php while (have_posts()) :  the_post();  ?>
+
                                     <div class="col-md-4">
                                         <article class="news">
                                             <?php the_post_thumbnail( ); ?>
-                                           <!-- <img src="<?php bloginfo('template_directory'); ?>/images/Pasport_N_Usman-1.png" alt="картинка">-->
                                             <p class="news__date"><?php the_time('j F Y'); ?></p>
                                             <p class="news__preview-text">
                                                 <?php the_excerpt(); ?>
@@ -136,46 +72,42 @@
                                 <?php endwhile; endif; ?>
 
 
+                        </div>
 
-                            <!--<div class="col-md-4">
-                                <article class="news">
-                                    <img src="<?php bloginfo('template_directory'); ?>/images/Pasport_N_Usman-1.png" alt="картинка">
-                                    <p class="news__date">22.02.2017</p>
-                                    <p class="news__preview-text">
-                                        Lorem Ipsum - это текст-"рыба",
-                                        часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой"
-                                        для текстов на латинице с начала XVI века.
-                                    </p>
-                                    <a class="btn custom-readmore" href="#">Подробнее...</a>
-                                </article>
-                            </div>
-
+                        <div class="row clearfix">
                             <div class="col-md-4">
-                                <article class="news">
-                                    <img src="<?php bloginfo('template_directory'); ?>/images/Pasport_N_Usman-1.png" alt="картинка">
-                                    <p class="news__date">22.02.2017</p>
-                                    <p class="news__preview-text">
-                                        Lorem Ipsum - это текст-"рыба",
-                                        часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой"
-                                        для текстов на латинице с начала XVI века.
-                                    </p>
-                                    <a class="btn custom-readmore" href="#">Подробнее...</a>
-                                </article>
+                                <h3 class="block-title">Документы</h3>
+                                <?php query_posts('category_name=Документы&showposts=5'); ?>
+
+                                <ul class="content-list">
+                                    <?php if (have_posts()) : ?>
+                                        <?php while (have_posts()) :  the_post();  ?>
+
+                                            <li class="content-list__item">
+                                                <a href="<?php the_permalink() ?>"><?php the_title() ?></a>
+                                            </li>
+
+                                        <?php endwhile; endif; ?>
+                                </ul>
+
                             </div>
-
                             <div class="col-md-4">
-                                <article class="news">
-                                    <img src="<?php bloginfo('template_directory'); ?>/images/Pasport_N_Usman-1.png" alt="картинка">
-                                    <p class="news__date">22.02.2017</p>
-                                    <p class="news__preview-text">
-                                        Lorem Ipsum - это текст-"рыба",
-                                        часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой"
-                                        для текстов на латинице с начала XVI века.
-                                    </p>
-                                    <a class="btn custom-readmore" href="#">Подробнее...</a>
-                                </article>
-                            </div>-->
-
+                                <h3 class="block-title">Отделы МФЦ</h3>
+                                <?php query_posts('category_name=Отделы МФЦ&showposts=5'); ?>
+                                <ul class="content-list">
+                                    <?php if (have_posts()) : ?>
+                                        <?php while (have_posts()) :  the_post();  ?>
+                                            <li class="content-list__item">
+                                                <a href="<?php the_permalink() ?>"><?php the_title() ?></a>
+                                            </li>
+                                        <?php endwhile; endif; ?>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <h3 class="block-title">Часы работы</h3>
+                                <span class="days-work">ПН-ПТ : </span><span class="time-work"><?php echo get_theme_mod('five-days', 'с 8:00 до 19:00'); ?></span>
+                                <span class="days-work">СБ : </span><span class="time-work"><span><?php echo get_theme_mod('one-day', 'с 9:00 до 13:00'); ?></span>
+                            </div>
                         </div>
                     </section>
                 </div>

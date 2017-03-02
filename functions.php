@@ -73,4 +73,154 @@ function new_excerpt_length($length) {
 add_filter('excerpt_length', 'new_excerpt_length');
 
 
+
+
+//customizer
+add_action('admin_menu', function(){
+    add_theme_page('Настроить', 'Настроить', 'edit_theme_options', 'customize.php');
+});
+add_action('customize_register', function($customizer){
+    //footer
+    $customizer->add_section(
+        'example_section_one',
+        array(
+            'title' => 'Настройки футера',
+            'description' => 'Настройки контактов в футере',
+            'priority' => 35,
+        )
+    );
+
+    $customizer->add_setting(
+        'copyright_textbox',
+        array('default' => 'Отделение МФЦ')
+    );
+    $customizer->add_control(
+        'copyright_textbox',
+        array(
+            'label' => 'Текст копирайта',
+            'section' => 'example_section_one',
+            'type' => 'text',
+        )
+    );
+
+    $customizer->add_setting(
+        'footer-phone',
+        array('default' => 'Телефон тех.поддержки')
+    );
+    $customizer->add_control(
+        'footer-phone',
+        array(
+            'label' => 'Телефон тех.поддержки',
+            'section' => 'example_section_one',
+            'type' => 'text',
+        )
+    );
+
+    $customizer->add_setting(
+        'footer-email',
+        array('default' => 'Email тех.поддержки')
+    );
+    $customizer->add_control(
+        'footer-email',
+        array(
+            'label' => 'Email тех.поддержки',
+            'section' => 'example_section_one',
+            'type' => 'text',
+        )
+    );
+
+    // header
+
+    $customizer->add_section(
+        'example_section_two',
+        array(
+            'title' => 'Настройки шапки',
+            'description' => 'Настройки шапки',
+            'priority' => 36,
+        )
+    );
+    
+    $customizer->add_setting(
+        'title-text',
+        array('default' => 'Название организации')
+    );
+    $customizer->add_control(
+        'title-text',
+        array(
+            'label' => 'Текст в шапке',
+            'section' => 'example_section_two',
+            'type' => 'text',
+        )
+    );
+
+    $customizer->add_setting(
+        'header-phone',
+        array('default' => '8 (473) 226-99-99')
+    );
+    $customizer->add_control(
+        'header-phone',
+        array(
+            'label' => 'Телефон организации',
+            'section' => 'example_section_two',
+            'type' => 'text',
+        )
+    );
+
+    // work time
+
+    $customizer->add_section(
+        'example_section_three',
+        array(
+            'title' => 'Время Работы',
+            'description' => 'Время Работы учреждения',
+            'priority' => 36,
+        )
+    );
+
+    $customizer->add_setting(
+        'five-days',
+        array('default' => 'с 8:00 до 19:00 ')
+    );
+    $customizer->add_control(
+        'five-days',
+        array(
+            'label' => 'ПН-ПТ',
+            'section' => 'example_section_three',
+            'type' => 'text',
+        )
+    );
+
+    $customizer->add_setting(
+        'one-day',
+        array('default' => 'с 9:00 до 13:00')
+    );
+    $customizer->add_control(
+        'one-day',
+        array(
+            'label' => 'СБ',
+            'section' => 'example_section_three',
+            'type' => 'text',
+        )
+    );
+
+});
+
+// mark
+
+function true_apply_categories_for_pages(){
+    add_meta_box( 'categorydiv', 'Категории', 'post_categories_meta_box', 'page', 'side', 'normal'); // добавляем метабокс категорий для страниц
+    register_taxonomy_for_object_type('category', 'page'); // регистрируем рубрики для страниц
+}
+// обязательно вешаем на admin_init
+add_action('admin_init','true_apply_categories_for_pages');
+
+function true_expanded_request_category($q) {
+    if (isset($q['category_name'])) // если в запросе присутствует параметр рубрики
+        $q['post_type'] = array('post', 'page'); // то, помимо записей, выводим также и страницы
+    return $q;
+}
+
+add_filter('request', 'true_expanded_request_category');
+
+
 ?>

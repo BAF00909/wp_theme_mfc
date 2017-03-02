@@ -25,13 +25,13 @@
     <div class="container clearfix">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                <a href="http://fz.pautino.ru/Force/" class="logo-link"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt=""></a>
+                <a href="<?php echo get_home_url(); ?>" class="logo-link"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt=""></a>
                 <p class="slogan">государственные<br>и муниципальные услуги</p>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-9">
 
                 <div class="page-header__top-panel">
-                    <span class="top-panel__info">﻿ Центр телефонного обслуживания: <a href="tel: 8 (473) 226-99-99" >8 (473) 226-99-99</a></span>
+                    <span class="top-panel__info">﻿ Центр телефонного обслуживания: <a href="tel: <?php echo get_theme_mod('header-phone', '8 (473) 226-99-99'); ?>" ><?php echo get_theme_mod('header-phone', '8 (473) 226-99-99'); ?></a></span>
                     <span class="account"><a href="#">Войти через ЕСИА</a></span>
                 </div>
 
@@ -57,7 +57,7 @@
                     </ul>-->
                 </nav>
 
-                <h1 class="title-text">Автономное учреждение Воронежской области «Многофункциональный центр предоставления государственных и муниципальных услуг»</h1>
+                <h1 class="title-text"><?php echo get_theme_mod('title-text', 'Название организации'); ?></h1>
                 </div>
             </div>
         </div>
