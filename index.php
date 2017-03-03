@@ -5,7 +5,6 @@
         <div class="row">
             <div class="col-md-3">
 
-                <!--Аккордион-->
 
                 <?php if ( is_active_sidebar( 'true_side' ) ) : ?>
 
@@ -27,16 +26,16 @@
                             <div id="slider">
 
                                 <div class="slide" style="position: absolute; top: 0px; left: 0px; display: none">
-                                    <img src="<?php bloginfo('template_directory'); ?>/images/sl10.png"  height="480">
+                                    <img src="<?php bloginfo('template_directory'); ?>/images/sl10.png" width="100%"  height="480">
                                 </div>
                                 <div class="slide" style="position: absolute; top: 0px; left: 0px; display: none">
-                                    <img src="<?php bloginfo('template_directory'); ?>/images/sreda.png"  height="480">
+                                    <img src="<?php bloginfo('template_directory'); ?>/images/sreda.png" width="100%" height="480">
                                 </div>
                                 <div class="slide" style="position: absolute; top: 0px; left: 0px; display: none">
-                                    <img src="<?php bloginfo('template_directory'); ?>/images/sl12.png"  height="480">
+                                    <img src="<?php bloginfo('template_directory'); ?>/images/sl12.png" width="100%" height="480">
                                 </div>
                                 <div class="slide" style="position: absolute; top: 0px; left: 0px; display: block">
-                                    <img src="<?php bloginfo('template_directory'); ?>/images/sl2.png"  height="480">
+                                    <img src="<?php bloginfo('template_directory'); ?>/images/sl2.png" width="100%" height="480">
                                 </div>
                             </div>
                         </div>
@@ -60,12 +59,11 @@
 
                                     <div class="col-md-4">
                                         <article class="news">
-                                            <?php the_post_thumbnail( ); ?>
-                                            <p class="news__date"><?php the_time('j F Y'); ?></p>
+                                            <a class="news__title" href="<?php the_permalink() ?>"><?php the_title(); ?></a>
                                             <p class="news__preview-text">
                                                 <?php the_excerpt(); ?>
                                             </p>
-                                            <a class="btn custom-readmore" href="<?php the_permalink() ?>">Подробнее...</a>
+                                            <a class="btn custom-readmore" href="<?php the_permalink() ?>">Подробнее ></a>
                                         </article>
                                     </div>
 
@@ -93,7 +91,7 @@
                             </div>
                             <div class="col-md-4">
                                 <h3 class="block-title">Отделы МФЦ</h3>
-                                <?php query_posts('category_name=Отделы МФЦ&showposts=5'); ?>
+                                <?php query_posts('category_name=Филиалы МФЦ&showposts=5'); ?>
                                 <ul class="content-list">
                                     <?php if (have_posts()) : ?>
                                         <?php while (have_posts()) :  the_post();  ?>

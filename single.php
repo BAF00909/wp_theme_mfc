@@ -26,9 +26,9 @@
                                     <h2><?php the_title(); ?></h2>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row clearfix">
                                 <div class="col-md-4">
-                                    <?php the_post_thumbnail( ); ?>
+                                   <div class="img-wrapper" id="img-wrapper--in"> <?php the_post_thumbnail(); ?></div>
                                 </div>
                                 <div class="col-md-8">
                                     <?php $post = get_post($post_id);?>
@@ -50,6 +50,7 @@
                         </div>
 
                     <?php } ?>
+
                     </section>
                 </div>
             </div>

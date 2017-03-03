@@ -222,5 +222,21 @@ function true_expanded_request_category($q) {
 
 add_filter('request', 'true_expanded_request_category');
 
+/**
+* Search form
+*/
+
+function my_search_form( $form ) {
+    $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
+	<div><label class="screen-reader-text" for="s">' . '</label>
+	<input type="text" id="search" class="search-field" placeholder="поиск" value="' . get_search_query() . '" name="s" />
+	</div>
+	</form>';
+
+    return $form;
+}
+
+add_filter( 'get_search_form', 'my_search_form' );
+
 
 ?>

@@ -31,14 +31,14 @@ Template Name: template-page1
 
                             <h2> <?php wp_title();?></h2>
 
-                            <?php if(in_category('Отделы МФЦ')){?>
+                            <?php if(in_category('Филиалы МФЦ')){?>
 
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <h3 class="title-category">Отделы МФЦ</h3>
+                                        <h3 class="title-category">Филиалы МФЦ</h3>
                                     </div>
                                 </div>
-                                <?php query_posts('category_name=Отделы МФЦ&showposts=5'); ?>
+                                <?php query_posts('category_name=Филиалы МФЦ&showposts=5'); ?>
 
                                 <?php if (have_posts()) : while (have_posts()) : the_post();?>
 

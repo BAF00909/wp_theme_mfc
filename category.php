@@ -32,22 +32,31 @@
 
                                 <?php if (have_posts()) : while (have_posts()) : the_post();?>
 
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <h4 class="list-title-news"> <a title="" href="<?php the_permalink() ?>"> <?php the_title(); ?> </a> </h4>
+                                <div class="row clearfix row--news">
+
+                                    <div class="col-md-4">
+                                        <?php the_post_thumbnail(array(240,170)); ?>
                                     </div>
+
+                                    <div class="col-md-8">
+                                        <p class="news__date"><?php the_time('j F Y'); ?></p>
+                                        <a class="news__title" href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+                                        <p class="news__preview-text">
+                                            <?php the_excerpt(); ?>
+                                        </p>
+                                    </div>
+
                                 </div>
 
                                 <?php endwhile; else: ?>
                                 <?php endif; ?>
 
                                 <?php } else { ?>
+                                <div class="col-md-12">
+                                    <h3 class="title-category"><?php single_cat_title(); ?></h3>
+                                </div>
 
                                 <?php if (have_posts()) : while (have_posts()) : the_post();?>
-
-                                    <div class="col-md-12">
-                                        <h3 class="title-category"><?php single_cat_title(); ?></h3>
-                                    </div>
 
                                     <div class="row">
                                         <div class="col-md-12">
