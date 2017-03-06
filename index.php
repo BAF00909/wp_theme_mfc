@@ -74,7 +74,7 @@
 
                         <div class="row clearfix">
                             <div class="col-md-4">
-                                <h3 class="block-title">Документы</h3>
+                                <h3 class="block-title"><a href="#" class="btn_all-news">Документы</a></h3>
                                 <?php query_posts('category_name=Документы&showposts=5'); ?>
 
                                 <ul class="content-list">
@@ -90,7 +90,7 @@
 
                             </div>
                             <div class="col-md-4">
-                                <h3 class="block-title">Отделы МФЦ</h3>
+                                <h3 class="block-title"><a href="#" class="btn_all-news">Отделы МФЦ</a></h3>
                                 <?php query_posts('category_name=Филиалы МФЦ&showposts=5'); ?>
                                 <ul class="content-list">
                                     <?php if (have_posts()) : ?>
@@ -102,7 +102,7 @@
                                 </ul>
                             </div>
                             <div class="col-md-4">
-                                <h3 class="block-title">Часы работы</h3>
+                                <h3 class="block-title"><a href="#" class="btn_all-news" onclick="return false;">Часы работы</a></h3>
                                 <span class="days-work">ПН-ПТ : </span><span class="time-work"><?php echo get_theme_mod('five-days', 'с 8:00 до 19:00'); ?></span>
                                 <span class="days-work">СБ : </span><span class="time-work"><span><?php echo get_theme_mod('one-day', 'с 9:00 до 13:00'); ?></span>
                             </div>

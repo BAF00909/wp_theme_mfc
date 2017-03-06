@@ -51,6 +51,12 @@
                                 <?php endwhile; else: ?>
                                 <?php endif; ?>
 
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <?php the_posts_pagination(); ?>
+                                    </div>
+                                </div>
+
                                 <?php } else { ?>
                                 <div class="col-md-12">
                                     <h3 class="title-category"><?php single_cat_title(); ?></h3>
@@ -68,6 +74,12 @@
                                 <?php endif; ?>
 
                                 <?php } ?>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <?php the_posts_pagination(); ?>
+                            </div>
+                        </div>
 
                     </section>
                 </div>
