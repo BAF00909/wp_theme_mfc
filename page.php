@@ -9,7 +9,7 @@
 <?php get_header(); ?>
 
 <section class="page-content clearfix">
-    <div class="container">
+    <div class="container clearfix">
         <div class="row">
             <div class="col-md-3">
                 
@@ -26,11 +26,8 @@
 
             </div>
             <div class="col-md-9">
-                <div class="content clearfix">
                     <section class="main-content">
-                        <div class="row">
-                            
-                            <div id="primary" class="content-area">
+                            <div class="content-area">
                                 <main id="main" class="site-main" role="main">
 
                                     <?php
@@ -52,9 +49,7 @@
                                 </main>
                             </div>
 
-                        </div>
                     </section>
-                </div>
             </div>
         </div>
     </div>

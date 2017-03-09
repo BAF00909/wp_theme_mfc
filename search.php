@@ -10,7 +10,7 @@
 get_header(); ?>
 
 
-    <div class="container">
+    <div class="container clearfix">
         <div class="row">
             <div class="col-md-3">
 
@@ -60,5 +60,4 @@ get_header(); ?>
 
 
 
-<?php
-get_footer();
+<?php get_footer(); ?>

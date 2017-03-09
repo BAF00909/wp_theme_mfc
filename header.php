@@ -35,6 +35,9 @@
                 <div class="page-header__top-panel">
                     <span class="top-panel__info">﻿ Центр телефонного обслуживания: <a href="tel: <?php echo get_theme_mod('header-phone', '8 (473) 226-99-99'); ?>" ><?php echo get_theme_mod('header-phone', '8 (473) 226-99-99'); ?></a></span>
                    <!-- <span class="account"><a href="#">Войти через ЕСИА</a></span>-->
+
+                        <?php dynamic_sidebar( 'sidebar_top' ); ?>
+
                 </div>
 
                 <nav class="page-header-nav">

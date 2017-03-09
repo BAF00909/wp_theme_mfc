@@ -77,6 +77,18 @@ function true_register_wp_sidebars() {
             'after_title' => '</h3>'
         )
     );
+
+    register_sidebar(
+        array(
+            'id' => 'sidebar_top',
+            'name' => 'блок авторизации',
+            'description' => 'Перетащите сюда виджеты, чтобы добавить их в сайдбар.',
+            'before_widget' => '<span id="%1$s" class="authorization">',
+            'after_widget' => '</span>',
+            'before_title' => '<h3 class="widget-title">',
+            'after_title' => '</h3>'
+        )
+    );
 }
 
 add_action( 'widgets_init', 'true_register_wp_sidebars' );
@@ -216,6 +228,93 @@ add_action('customize_register', function($customizer){
             'type' => 'text',
         )
     );
+
+    //$customizer->add_section(
+    //    'example_section_three',
+    //    array(
+    //        'title' => 'Время Работы',
+    //        'description' => 'Время Работы учреждения',
+    //        'priority' => 36,
+    //    )
+    //);
+//
+    //$customizer->add_setting(
+    //    'first-day',
+    //    array('default' => 'с 8:00 до 19:00 ')
+    //);
+    //$customizer->add_control(
+    //    'first-day',
+    //    array(
+    //        'label' => 'ПН',
+    //        'section' => 'example_section_three',
+    //        'type' => 'text',
+    //    )
+    //);
+//
+    //$customizer->add_setting(
+    //    'second-days',
+    //    array('default' => 'с 8:00 до 19:00 ')
+    //);
+    //$customizer->add_control(
+    //    'second-days',
+    //    array(
+    //        'label' => 'Вт',
+    //        'section' => 'example_section_three',
+    //        'type' => 'text',
+    //    )
+    //);
+//
+    //$customizer->add_setting(
+    //    'third-days',
+    //    array('default' => 'с 8:00 до 19:00 ')
+    //);
+    //$customizer->add_control(
+    //    'third-days',
+    //    array(
+    //        'label' => 'Ср',
+    //        'section' => 'example_section_three',
+    //        'type' => 'text',
+    //    )
+    //);
+//
+    //$customizer->add_setting(
+    //    'fourth-days',
+    //    array('default' => 'с 8:00 до 19:00 ')
+    //);
+    //$customizer->add_control(
+    //    'fourth-days',
+    //    array(
+    //        'label' => 'Чт',
+    //        'section' => 'example_section_three',
+    //        'type' => 'text',
+    //    )
+    //);
+//
+    //$customizer->add_setting(
+    //    'fifth-days',
+    //    array('default' => 'с 8:00 до 19:00 ')
+    //);
+    //$customizer->add_control(
+    //    'fifth-days',
+    //    array(
+    //        'label' => 'Пт',
+    //        'section' => 'example_section_three',
+    //        'type' => 'text',
+    //    )
+    //);
+//
+    //$customizer->add_setting(
+    //    'sixth-day',
+    //    array('default' => 'с 9:00 до 13:00')
+    //);
+    //$customizer->add_control(
+    //    'sixth-day',
+    //    array(
+    //        'label' => 'СБ',
+    //        'section' => 'example_section_three',
+    //        'type' => 'text',
+    //    )
+    //);
 
 });
 

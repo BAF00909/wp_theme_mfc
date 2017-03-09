@@ -44,7 +44,7 @@
                     <section class="main-content">
 
                         <div class="row clearfix">
-                            <?php $catID = get_cat_ID( 'Новости' ); ?>
+                            <?php $catID = get_cat_ID( 'news' ); ?>
                             <div class="col-md-12"><a href="<?php echo get_category_link( $catID ); ?>" class="btn_all-news">Все новости</a></div>
                         </div>
 
@@ -52,7 +52,7 @@
 
 
 
-                            <?php query_posts('category_name=Новости&showposts=3'); ?>
+                            <?php query_posts('category_name=news&showposts=3'); ?>
 
                             <?php if (have_posts()) : ?>
                                 <?php while (have_posts()) :  the_post();  ?>
@@ -74,8 +74,9 @@
 
                         <div class="row clearfix">
                             <div class="col-md-4">
-                                <h3 class="block-title"><a href="#" class="btn_all-news">Документы</a></h3>
-                                <?php query_posts('category_name=Документы&showposts=5'); ?>
+                                <?php $catIDdoc = get_cat_ID( 'documents' ); ?>
+                                <h3 class="block-title"><a href="<?php echo get_category_link( $catIDdoc ); ?>" class="btn_all-news">Документы</a></h3>
+                                <?php query_posts('category_name=documents&showposts=5'); ?>
 
                                 <ul class="content-list">
                                     <?php if (have_posts()) : ?>
@@ -90,8 +91,9 @@
 
                             </div>
                             <div class="col-md-4">
-                                <h3 class="block-title"><a href="#" class="btn_all-news">Отделы МФЦ</a></h3>
-                                <?php query_posts('category_name=Филиалы МФЦ&showposts=5'); ?>
+                                <?php $catIDfil = get_cat_ID( 'filials' ); ?>
+                                <h3 class="block-title"><a href="<?php echo get_category_link( $catIDfil ); ?>" class="btn_all-news">Отделы МФЦ</a></h3>
+                                <?php query_posts('category_name=filials&showposts=5'); ?>
                                 <ul class="content-list">
                                     <?php if (have_posts()) : ?>
                                         <?php while (have_posts()) :  the_post();  ?>

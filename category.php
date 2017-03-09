@@ -20,9 +20,7 @@
             <div class="col-md-9">
                 <div class="content clearfix">
                     <section class="main-content">
-
-
-                            <?php if(in_category('Новости')){?>
+                            <?php if(in_category('news')){?>
 
                                 <div class="row">
                                     <div class="col-md-12">
@@ -53,7 +51,17 @@
 
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <?php the_posts_pagination(); ?>
+                                        <?php  the_posts_pagination( array(
+                                            'show_all'     => False, // показаны все страницы участвующие в пагинации
+                                            'end_size'     => 1,     // количество страниц на концах
+                                            'mid_size'     => 1,     // количество страниц вокруг текущей
+                                            'prev_next'    => True,  // выводить ли боковые ссылки "предыдущая/следующая страница".
+                                            'prev_text'    => __('« Предыдущая'),
+                                            'next_text'    => __('Следующая »'),
+                                            'add_args'     => False,
+                                            'add_fragment' => '',     // Текст который добавиться ко всем ссылкам.
+                                            'screen_reader_text' => __( 'Постраничная навигация' ),
+                                        ) ); ?>
                                     </div>
                                 </div>
 
@@ -77,7 +85,17 @@
 
                         <div class="row">
                             <div class="col-md-12">
-                                <?php the_posts_pagination(); ?>
+                                <?php  the_posts_pagination( array(
+                                    'show_all'     => False, // показаны все страницы участвующие в пагинации
+                                    'end_size'     => 1,     // количество страниц на концах
+                                    'mid_size'     => 1,     // количество страниц вокруг текущей
+                                    'prev_next'    => True,  // выводить ли боковые ссылки "предыдущая/следующая страница".
+                                    'prev_text'    => __('« Предыдущая'),
+                                    'next_text'    => __('Следующая »'),
+                                    'add_args'     => False,
+                                    'add_fragment' => '',     // Текст который добавиться ко всем ссылкам.
+                                    'screen_reader_text' => __( 'Постраничная навигация' ),
+                                ) ); ?>
                             </div>
                         </div>
 

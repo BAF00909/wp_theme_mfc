@@ -14,11 +14,6 @@
                     </div>
                     <div class="col-md-4">
                         <?php get_search_form(); ?>
-                        <!--<form id="page-footer__searchform" action="/searchForm" method="get" class="page-footer__searchform">
-                            <input type="search" name="search-field" id="page-footer__search-field" placeholder="Найти">
-                            <input type="submit" class="searchBtn" value="">
-                        </form>-->
-
                        <!-- <ul class="v-menu social-menu">
                             <li class="v-menu__item social-menu__item">
                                 <a href="#" class="menu__link social-menu__link social-menu__link--tw"></a>

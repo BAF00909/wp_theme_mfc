@@ -3,7 +3,7 @@ Theme Name: mfc2017
 */
 @font-face {
     font-family: 'Glyphicons Halflings';
-    src: url('themes//fonts/glyphicons') format('png');
+    src: url('themes/fonts/glyphicons') format('png');
     /*src: url('../fonts/glyphicons-halflings-regular.eot');
     src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');*/
 }
@@ -275,6 +275,7 @@ p {
 .searchform {
     position: relative;
     margin-bottom: 10px;
+    text-align: right;
 }
 .search-field {
     background: #805038;
@@ -298,7 +299,7 @@ p {
     position: absolute;
     background: url(./images/magnifying-glass.png);
     border: none;
-    left: 125px;
+    right: 10px;
     top: 6px;
     cursor: pointer;
     width: 16px;
@@ -415,6 +416,18 @@ p {
 #img-wrapper--in img{
     width: 100%;
     height: auto;
+}
+.entry-title {
+    margin: 0;
+}
+.bvi-panel-close- {
+    border: 2px solid;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+}
+.nav-links {
+    font-size: 16px;
 }
 
 @media only screen and (max-width: 375px) {
