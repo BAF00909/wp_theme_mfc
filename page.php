@@ -30,6 +30,11 @@
                             <div class="content-area">
                                 <main id="main" class="site-main" role="main">
 
+
+                                    <div class="breadcrumbs">
+                                        <?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
+                                    </div>
+
                                     <?php
 
                                     while ( have_posts() ) : the_post();

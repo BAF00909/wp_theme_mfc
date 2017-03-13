@@ -21,11 +21,8 @@
                 <div class="content clearfix">
                     <section class="main-content">
                             <?php if(in_category('news')){?>
-
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <h3 class="title-category">Новости</h3>
-                                    </div>
+                                <div class="breadcrumbs">
+                                    <?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
                                 </div>
 
                                 <?php if (have_posts()) : while (have_posts()) : the_post();?>
@@ -66,8 +63,8 @@
                                 </div>
 
                                 <?php } else { ?>
-                                <div class="col-md-12">
-                                    <h3 class="title-category"><?php single_cat_title(); ?></h3>
+                                <div class="breadcrumbs">
+                                    <?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
                                 </div>
 
                                 <?php if (have_posts()) : while (have_posts()) : the_post();?>

@@ -25,17 +25,17 @@
                         <div id="slider-wrap">
                             <div id="slider">
 
-                                <div class="slide" style="position: absolute; top: 0px; left: 0px; display: none">
-                                    <img src="<?php bloginfo('template_directory'); ?>/images/sl10.png" width="100%"  height="480">
+                                <div class="slide" style="position: absolute; top: 0px; left: 0px; display: none;background-image: url(<?php bloginfo('template_directory'); ?>/images/sl10.png);background-size: contain;background-position: center;background-repeat: no-repeat">
+                                   <!-- <img src="<?php bloginfo('template_directory'); ?>/images/sl10.png" width="100%"  >-->
                                 </div>
-                                <div class="slide" style="position: absolute; top: 0px; left: 0px; display: none">
-                                    <img src="<?php bloginfo('template_directory'); ?>/images/sreda.png" width="100%" height="480">
+                                <div class="slide" style="position: absolute; top: 0px; left: 0px; display: none;background-image: url(<?php bloginfo('template_directory'); ?>/images/sreda.png);background-size: contain;background-position: center;background-repeat: no-repeat">
+                                    <!--<img src="<?php bloginfo('template_directory'); ?>/images/sreda.png" width="100%" >-->
                                 </div>
-                                <div class="slide" style="position: absolute; top: 0px; left: 0px; display: none">
-                                    <img src="<?php bloginfo('template_directory'); ?>/images/sl12.png" width="100%" height="480">
+                                <div class="slide" style="position: absolute; top: 0px; left: 0px; display: none;background-image: url(<?php bloginfo('template_directory'); ?>/images/sl12.png);background-size: contain;background-position: center;background-repeat: no-repeat">
+                                    <!--<img src="<?php bloginfo('template_directory'); ?>/images/sl12.png" width="100%" >-->
                                 </div>
-                                <div class="slide" style="position: absolute; top: 0px; left: 0px; display: block">
-                                    <img src="<?php bloginfo('template_directory'); ?>/images/sl2.png" width="100%" height="480">
+                                <div class="slide" style="position: absolute; top: 0px; left: 0px; display: block;background-image: url(<?php bloginfo('template_directory'); ?>/images/sl2.png);background-size: contain;background-position: center;background-repeat: no-repeat">
+                                    <!--<img src="<?php bloginfo('template_directory'); ?>/images/sl2.png" width="100%" >-->
                                 </div>
                             </div>
                         </div>
@@ -44,7 +44,7 @@
                     <section class="main-content">
 
                         <div class="row clearfix">
-                            <?php $catID = get_cat_ID( 'news' ); ?>
+                            <?php $catID = get_cat_ID( 'Новости' ); ?>
                             <div class="col-md-12"><a href="<?php echo get_category_link( $catID ); ?>" class="btn_all-news">Все новости</a></div>
                         </div>
 
@@ -74,7 +74,10 @@
 
                         <div class="row clearfix">
                             <div class="col-md-4">
-                                <?php $catIDdoc = get_cat_ID( 'documents' ); ?>
+                                <?php
+                                $category = get_category_by_slug( 'documents' );
+                                $catIDdoc = $category->term_id;
+                                ?>
                                 <h3 class="block-title"><a href="<?php echo get_category_link( $catIDdoc ); ?>" class="btn_all-news">Документы</a></h3>
                                 <?php query_posts('category_name=documents&showposts=5'); ?>
 
@@ -91,7 +94,10 @@
 
                             </div>
                             <div class="col-md-4">
-                                <?php $catIDfil = get_cat_ID( 'filials' ); ?>
+                                <?php
+                                $category = get_category_by_slug( 'filials' );
+                                $catIDfil = $category->term_id;
+                                ?>
                                 <h3 class="block-title"><a href="<?php echo get_category_link( $catIDfil ); ?>" class="btn_all-news">Отделы МФЦ</a></h3>
                                 <?php query_posts('category_name=filials&showposts=5'); ?>
                                 <ul class="content-list">

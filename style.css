@@ -78,19 +78,20 @@ p {
 .logo-link {
     display: block;
     text-decoration: none;
-    margin: 24px 0 0 118px;
+    margin: 120px 0 0 70px;
+   /* margin: 24px 0 0 118px;*/
 }
 .slogan {
     color: #f26649;
     font-size: 12px;
     line-height: 12px;
     text-align: right;
-    margin-right: 0px;
+    margin-right: 47px;
 }
 .page-header__top-panel {
     background: #69321f;
     padding: 6px 40px 6px 12px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 .top-panel__info,
 .top-panel__info a{
@@ -106,7 +107,7 @@ p {
     text-decoration: none;
 }
 .page-header-nav {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 #main-menu .menu-item {
     display: inline-block;
@@ -429,6 +430,16 @@ p {
 .nav-links {
     font-size: 16px;
 }
+.sidebar {
+    padding-right: 50px;
+}
+.content-header {
+    margin-bottom: 57px;
+}
+
+
+
+
 
 @media only screen and (max-width: 375px) {
     .logo-link {
@@ -610,7 +621,7 @@ p {
 }
 #slider{
     width: 100%;
-    height: 480px;
+    height: 353px;
     overflow: hidden;
     position:relative;}
 .slide{ /* Слайд */
@@ -619,6 +630,7 @@ p {
 }
 .slide img {
     width: 100%;
+    height: auto;
 }
 .sli-links{
     margin-top:10px;
