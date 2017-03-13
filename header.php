@@ -42,6 +42,8 @@
 
                 <nav class="page-header-nav">
 
+                    <a href="#" class="mobile-menu"><img src="<?php bloginfo('template_directory'); ?>/images/menu.svg" alt=""></a>
+
                     <?php
                     wp_nav_menu(array(
                         'theme_location' => 'header_menu',

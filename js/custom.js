@@ -140,4 +140,23 @@
         });
 
     });
+
+
+    jQuery(function ($) {
+        $(document).ready(function () {
+            var btnMobile = $('.mobile-menu img');
+            var menu = $('#main-menu');
+            btnMobile.on('click',function(){
+                if(!menu.hasClass('open')){
+                    menu.removeClass('close');
+                    menu.addClass('open')
+                } else {
+                    menu.removeClass('open');
+                    menu.addClass('close');
+                }
+            });
+        });
+
+    });
+
 })();

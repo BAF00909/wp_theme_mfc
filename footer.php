@@ -25,6 +25,7 @@
 
                       <!--  <p class="copyright"><?php echo get_theme_mod('copyright_textbox', 'Текст копирайта еще не придумали'); ?></p>
                         <a href="#" class="confident-link">Конфиденциальность</a>-->
+                        <p class="version">v2017.03.13</p>
                     </div>
                 </div>
             </div>
