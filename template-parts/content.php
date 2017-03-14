@@ -30,6 +30,8 @@
     </div>
     <footer class="entry-footer">
         <?php edit_post_link( __( 'Edit', 'mfc2017' ), '<span class="edit-link">', '</span>' ); ?>
+        <?php the_tags('<ul><li>','</li><li>','</li></ul>'); ?>
     </footer>
+    
 
 </article>

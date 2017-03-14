@@ -11,8 +11,8 @@ function enqueue_styles() {
     wp_enqueue_style( 'normilize' );
     wp_register_style( 'bootstrap', THEME_DIR . '/css/bootstrap.min.css', array(), 'all' );
     wp_enqueue_style( 'bootstrap' );
-    wp_register_style( 'screen-style', THEME_DIR . '/style.css', array(), 'all' );
-    wp_enqueue_style( 'screen-style' );
+    //wp_register_style( 'screen-style', THEME_DIR . '/style.css', array(), 'all' );
+    //wp_enqueue_style( 'screen-style' );
     wp_register_style( 'bvi', THEME_DIR . '/css/bvi.min.css', array(), 'all' );
     wp_enqueue_style( 'bvi' );
 }
@@ -536,7 +536,17 @@ function dimox_breadcrumbs() {
         echo $wrap_after;
 
     }
-} // end of dimox_breadcrumbs()
+}
+
+if ( ! isset( $content_width ) ) $content_width = 900;
+
+
+function theme_version_shortcode() {
+    $theme_name = 'mfc2017'; // customize with your theme name
+    $theme_data = get_theme_data( get_theme_root() . '/' . $theme_name . '/style.css' );
+    return $theme_data['Version'];
+}
+add_shortcode('theme_version', 'theme_version_shortcode');
 
 
 

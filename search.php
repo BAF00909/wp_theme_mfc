@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package mfc
+ * @package mfc2017
  */
 
 get_header(); ?>
@@ -34,7 +34,7 @@ get_header(); ?>
                     <?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
                 </div>
 
-                <?php printf( __( 'Результаты поиска: %s', 'twentyten' ), '' . get_search_query() . '' ); // Динамический заголовок поиска?>
+                <?php printf( __( 'Результаты поиска: %s', 'mfc2017' ), '' . get_search_query() . '' ); // Динамический заголовок поиска?>
                 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); // Начало цикла ?>
 
                     <div class="category-text">

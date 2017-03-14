@@ -25,17 +25,17 @@
                         <div id="slider-wrap">
                             <div id="slider">
 
-                                <div class="slide" style="position: absolute; top: 0px; left: 0px; display: none;background-image: url(<?php bloginfo('template_directory'); ?>/images/sl10.png);background-size: contain;background-position: center;background-repeat: no-repeat">
-                                   <!-- <img src="<?php bloginfo('template_directory'); ?>/images/sl10.png" width="100%"  >-->
+                                <div class="slide" style="position: absolute; top: 0px; left: 0px; display: none;background-image: url(<?php echo esc_url( get_template_directory_uri() ); ?>/images/sl10.png);background-size: contain;background-position: center;background-repeat: no-repeat">
+                                   <!-- <img src="<?php esc_url( get_template_directory_uri() ); ?>/images/sl10.png" width="100%"  >-->
                                 </div>
-                                <div class="slide" style="position: absolute; top: 0px; left: 0px; display: none;background-image: url(<?php bloginfo('template_directory'); ?>/images/sreda.png);background-size: contain;background-position: center;background-repeat: no-repeat">
-                                    <!--<img src="<?php bloginfo('template_directory'); ?>/images/sreda.png" width="100%" >-->
+                                <div class="slide" style="position: absolute; top: 0px; left: 0px; display: none;background-image: url(<?php echo esc_url( get_template_directory_uri() ); ?>/images/sreda.png);background-size: contain;background-position: center;background-repeat: no-repeat">
+                                    <!--<img src="<?php esc_url( get_template_directory_uri() ); ?>/images/sreda.png" width="100%" >-->
                                 </div>
-                                <div class="slide" style="position: absolute; top: 0px; left: 0px; display: none;background-image: url(<?php bloginfo('template_directory'); ?>/images/sl12.png);background-size: contain;background-position: center;background-repeat: no-repeat">
-                                    <!--<img src="<?php bloginfo('template_directory'); ?>/images/sl12.png" width="100%" >-->
+                                <div class="slide" style="position: absolute; top: 0px; left: 0px; display: none;background-image: url(<?php echo esc_url( get_template_directory_uri() ); ?>/images/sl12.png);background-size: contain;background-position: center;background-repeat: no-repeat">
+                                    <!--<img src="<?php esc_url( get_template_directory_uri() ); ?>/images/sl12.png" width="100%" >-->
                                 </div>
-                                <div class="slide" style="position: absolute; top: 0px; left: 0px; display: block;background-image: url(<?php bloginfo('template_directory'); ?>/images/sl2.png);background-size: contain;background-position: center;background-repeat: no-repeat">
-                                    <!--<img src="<?php bloginfo('template_directory'); ?>/images/sl2.png" width="100%" >-->
+                                <div class="slide" style="position: absolute; top: 0px; left: 0px; display: block;background-image: url(<?php echo esc_url( get_template_directory_uri() ); ?>/images/sl2.png);background-size: contain;background-position: center;background-repeat: no-repeat">
+                                    <!--<img src="<?php esc_url( get_template_directory_uri() ); ?>/images/sl2.png" width="100%" >-->
                                 </div>
                             </div>
                         </div>
@@ -98,7 +98,7 @@
                                 $category = get_category_by_slug( 'filials' );
                                 $catIDfil = $category->term_id;
                                 ?>
-                                <h3 class="block-title"><a href="<?php echo get_category_link( $catIDfil ); ?>" class="btn_all-news">Отделы МФЦ</a></h3>
+                                <h3 class="block-title"><a href="<?php echo get_home_url(); ?>/map/" class="btn_all-news">Отделы МФЦ</a></h3>
                                 <?php query_posts('category_name=filials&showposts=5'); ?>
                                 <ul class="content-list">
                                     <?php if (have_posts()) : ?>

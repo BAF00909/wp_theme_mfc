@@ -1,11 +1,46 @@
 /*
 Theme Name: mfc2017
+Description: тема для портала 'Мои документы'
+Author: Бреус Александр
+Version: 2017.03.14
 */
+.wp-caption {
+    background: #F1F1F1;
+    line-height: 18px;
+    margin-bottom: 20px;
+    padding: 4px;
+    text-align: center;
+}
+
+.wp-caption-text {
+    color: #888;
+    font-size: 12px;
+    margin: 5px;
+}
+.sticky p {
+    font-size: 11px !important;
+    line-height: 15px;
+    font-weight: bold;
+}
+.gallery-caption {
+    text-align: center;
+}
+.bypostauthor {
+    background:#fafafa;
+    color:#555;
+}
+.alignright {
+    text-align: right;
+}
+.alignleft {
+    text-align: left;
+}
+.aligncenter {
+    text-align: center;
+}
 @font-face {
     font-family: 'Glyphicons Halflings';
     src: url('themes/fonts/glyphicons') format('png');
-    /*src: url('../fonts/glyphicons-halflings-regular.eot');
-    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');*/
 }
 .main-content {
     margin-bottom: 60px;
@@ -78,7 +113,7 @@ p {
 .logo-link {
     display: block;
     text-decoration: none;
-    margin: 120px 0 0 70px;
+    margin: 15px 0 0 70px;
    /* margin: 24px 0 0 118px;*/
 }
 .slogan {
@@ -453,6 +488,28 @@ p {
     bottom:-87px;
     right:5px;
     margin-bottom:0;
+}
+
+.breadcrumbs {
+    margin-bottom: 30px;
+}
+.breadcrumbs span {
+    padding: 0 2px;
+    color: #aaa;
+    text-decoration: none;
+    font-size: 11px;
+}
+.breadcrumbs span a:hover span {
+    color: #000;
+}
+.entry-header {
+    margin-bottom: 30px;
+}
+.post {
+    margin-bottom: 60px;
+}
+.pagination {
+    margin-bottom: 60px;
 }
 
 

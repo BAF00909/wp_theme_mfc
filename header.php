@@ -11,7 +11,9 @@
     <link rel="shortcut icon" href="<?php echo THEME_DIR; ?>/images/favicon.ico" />
     <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS2 Feed" href="<?php bloginfo('rss2_url'); ?>" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-    <title><?php wp_title(); ?><?php bloginfo( 'name' ); ?></title>
+    <link rel="stylesheet" href="<?php echo THEME_DIR; ?>/style.css">
+    <?php if (is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) wp_enqueue_script('comment-reply'); ?>
+    <title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
 
 
     <?php wp_head(); ?>
@@ -25,7 +27,7 @@
     <div class="container clearfix">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                <a href="<?php echo get_home_url(); ?>" class="logo-link"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt=""></a>
+                <a href="<?php echo get_home_url(); ?>" class="logo-link"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.png" alt=""></a>
                 <p class="slogan">государственные<br>и муниципальные услуги</p>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-9">
@@ -34,15 +36,12 @@
                 </div>
                 <div class="page-header__top-panel">
                     <span class="top-panel__info">﻿ Центр телефонного обслуживания: <a href="tel: <?php echo get_theme_mod('header-phone', '8 (473) 226-99-99'); ?>" ><?php echo get_theme_mod('header-phone', '8 (473) 226-99-99'); ?></a></span>
-                   <!-- <span class="account"><a href="#">Войти через ЕСИА</a></span>-->
-
                         <?php dynamic_sidebar( 'sidebar_top' ); ?>
-
                 </div>
 
                 <nav class="page-header-nav">
 
-                    <a href="#" class="mobile-menu"><img src="<?php bloginfo('template_directory'); ?>/images/menu.svg" alt=""></a>
+                    <a href="#" class="mobile-menu"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/menu.svg" width="30" height="30" alt=""></a>
 
                     <?php
                     wp_nav_menu(array(
