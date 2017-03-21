@@ -93,7 +93,7 @@
 
                                     <div class="col-md-4">
                                         <article class="news">
-                                            <p class="news-date"><?php the_time('j F Y'); ?></p>
+                                            <p class="news-date"><?php echo get_the_date('j. n. Y'); ?></p>
                                             <a class="news__title" href="<?php the_permalink() ?>"><?php the_title(); ?></a>
                                             <p class="news__preview-text">
                                                 <?php the_excerpt(); ?>
@@ -113,7 +113,7 @@
                                 $category = get_category_by_slug( 'documents' );
                                 $catIDdoc = $category->term_id;
                                 ?>
-                                <h3 class="block-title"><a href="<?php echo get_category_link( $catIDdoc ); ?>" class="btn_all-news">Документы</a></h3>
+                                <h3 class="block-title"><a href="<?php echo get_category_link( $catIDdoc ); ?>" class="btn_all-news btn_all-news--sm">Документы</a></h3>
                                 <?php query_posts('category_name=documents&showposts=5'); ?>
 
                                 <ul class="content-list content-list--documents">
@@ -121,7 +121,7 @@
                                         <?php while (have_posts()) :  the_post();  ?>
 
                                             <li class="content-list__item">
-                                                <a href="<?php the_permalink() ?>"><?php the_title() ?></a>
+                                                <a href="<?php the_permalink() ?>"><i class="fa fa-files-o" aria-hidden="true"></i>     <?php the_title() ?></a>
                                             </li>
 
                                         <?php endwhile; endif; ?>
@@ -133,7 +133,7 @@
                                 $category = get_category_by_slug( 'filials' );
                                 $catIDfil = $category->term_id;
                                 ?>
-                                <h3 class="block-title"><a href="<?php echo get_home_url(); ?>/map/" class="btn_all-news">Отделы МФЦ</a></h3>
+                                <h3 class="block-title"><a href="<?php echo get_home_url(); ?>/map/" class="btn_all-news btn_all-news--sm">Отделы МФЦ</a></h3>
                                 <?php query_posts('category_name=filials&showposts=5'); ?>
                                 <ul class="content-list content-list--filials">
                                     <?php if (have_posts()) : ?>
@@ -145,7 +145,7 @@
                                 </ul>
                             </div>
                             <div class="col-md-4">
-                                <h3 class="block-title"><a href="#" class="btn_all-news" onclick="return false;">Часы работы</a></h3>
+                                <h3 class="block-title"><a href="#" class="btn_all-news btn_all-news--sm" onclick="return false;">Часы работы</a></h3>
                                 <span class="days-work">ПН-ПТ : </span><span class="time-work"><?php echo get_theme_mod('five-days', 'с 8:00 до 19:00'); ?></span>
                                 <span class="days-work">СБ : </span><span class="time-work"><span><?php echo get_theme_mod('one-day', 'с 9:00 до 13:00'); ?></span>
                             </div>

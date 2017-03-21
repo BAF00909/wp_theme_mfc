@@ -2,8 +2,9 @@
 Theme Name: mfc2017
 Description: тема для портала 'Мои документы'
 Author: Бреус Александр
-Version: 2017.03.20
+Version: 2017.03.21
 */
+
 @font-face {
     font-family: 'Glyphicons Halflings';
     src: url('/wp-content/themes/mfc2017/fonts/glyphicons') format('png');
@@ -13,7 +14,15 @@ Version: 2017.03.20
     src: local("PT Sans"),
     url(/wp-content/themes/mfc2017/fonts/PTS55F_2.ttf);
 }
+@font-face {
+    font-family: 'Circe MD';
+    src: local("PT Sans"),
+    url(/wp-content/themes/mfc2017/fonts/CRC65PMD.otf);
+}
 body {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
     font-family: 'PT Sans', sans-serif;
 }
 .wp-caption {
@@ -52,6 +61,7 @@ body {
 }
 .main-content {
     margin-bottom: 60px;
+    padding-right: 70px;
 }
 p {
     margin: 0;
@@ -121,8 +131,8 @@ p {
 .logo-link {
     display: block;
     text-decoration: none;
-    margin: 70px 0 0 130px;
-   /* margin: 24px 0 0 118px;*/
+    text-align: right;
+    padding-right: 18%;
 }
 .logo-link:hover {
     text-decoration: none;
@@ -132,7 +142,7 @@ p {
     font-size: 12px;
     line-height: 12px;
     text-align: right;
-    margin-right: 47px;
+    margin-right: 7%;
 }
 .page-header__top-panel {
     background: #69321f;
@@ -140,12 +150,14 @@ p {
     margin-bottom: 10px;
 }
 .top-panel__info {
+    font-family: 'PT Sans';
     color: #989798;
-    font-size: 16px;
+    font-size: 14px;
 }
 .top-panel__info a{
+    font-family: 'PT Sans';
     color: #e04e38;
-    font-size: 18px;
+    font-size: 14px;
 }
 .account {
     float: right;
@@ -158,21 +170,29 @@ p {
 .page-header-nav {
     margin-bottom: 35px;
     position: relative;
+    padding-right: 97px;
+}
+#main-menu {
+    text-align: right;
 }
 #main-menu .menu-item {
     display: inline-block;
     position: relative;
 }
 #main-menu .menu-item a{
+    font-family: 'PT Sans';
     display: block;
     color: #c39367;
     text-decoration: underline;
-    font: 400 16px/30px Arial;
+    font-size: 15px;
     line-height: 30px;
     font-weight: normal;
 }
 #main-menu .menu-item a:hover {
     color: #000;
+}
+#main-menu .menu-item a:visited {
+    color: #623B2A;
 }
 
 #main-menu .menu-item:after {
@@ -220,18 +240,25 @@ p {
 .menu-item a {
     color: #c39367;
     text-decoration: underline;
-    font-size: 27px;
+    font-size: 20px;
     line-height: 41px;
     font-weight: normal;
 }
 .menu-item a:hover {
-    color: #000;
+    color: #623B2A;
+}
+.menu-item a:visited {
+    color: #623B2A;
 }
 .title-text {
+    font-family: 'Circe MD';
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 21px;
     color: #623b2b;
     margin-bottom: 0;
+}
+.page-header .title-text {
+    padding-right: 67px;
 }
 .block-relative {
     position: relative;
@@ -277,7 +304,7 @@ p {
 }
 .bg-brown {
     background: #69321f;
-    padding: 20px 58px 20px 20px;
+    padding: 20px 100px 20px 20px;
     min-height: 180px;
 }
 .bg-grey {
@@ -326,11 +353,17 @@ p {
     text-decoration: underline;
 }
 .page-footer .page-footer__phone {
+    font-family: "PT Sans";
     display: inline-block;
-    font-size: 22px;
+    font-size: 23px;
     color: #fff;
 }
+.page-footer .page-footer__phone:hover {
+    text-decoration: none;
+}
 .page-footer p {
+    font-family: "PT Sans";
+    font-size: 11px;
     color: #d99668;
     margin-bottom: 18px;
 }
@@ -355,7 +388,7 @@ p {
 .search-field:focus {
     outline: none;
 }
-.screen-reader-text:after {
+.searchform:after {
     content: '';
     display: block;
     position: absolute;
@@ -396,6 +429,8 @@ p {
     margin-bottom: 10px;
 }
 .news a {
+    font-family: "PT Sans";
+    font-size: 14px;
     display: block;
     text-align: left;
     color: #F26649;
@@ -405,11 +440,12 @@ p {
     margin-top: 5px;
 }
 .news .news__title {
-    font-size: 15px;
+    font-family: 'PT Sans';
+    font-size: 18px;
     font-weight: 600;
     line-height: 17px;
     text-align: left;
-    color: #c39367;
+    color: #e04e38;
     text-decoration: none;
     display: block;
 }
@@ -421,13 +457,17 @@ p {
 }
 
 .btn_all-news {
+    font-family: "PT Sans";
     color: #623b2a;
     font-style: italic;
     text-decoration: underline;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     margin-bottom: 5px;
     display: block;
+}
+.btn_all-news--sm {
+    font-size: 14px;
 }
 .btn_all-news:visited {
     color: #623b2a;
@@ -454,6 +494,8 @@ p {
     margin-bottom: 50px;
 }
 .content-list .content-list__item a {
+    font-family: "PT Sans";
+    font-size: 11px;
     color: #c39367;
     text-decoration: underline;
     position: relative;
@@ -463,22 +505,14 @@ p {
     list-style: none;
 }
 .content-list--documents .content-list__item {
-    padding-left: 24px;
     margin-bottom: 10px;
 }
 .content-list--documents .content-list__item a {
     display: block;
     position: relative;
 }
-.content-list--documents .content-list__item a:before {
-    content: '';
-    display: block;
-    width: 21px;
-    height: 24px;
-    background-image: url(./images/icon-documents.png);
-    position: absolute;
-    left: -29px;
-    top: -2px;
+.content-list--documents .content-list__item a .fa-files-o{
+    font-size: 20px;
 }
 .days-work {
     display: block;
@@ -515,14 +549,18 @@ p {
     font-size: 16px;
 }
 .sidebar {
-    padding-right: 50px;
+    padding-right: 24%;
 }
 .content-header {
     margin-bottom: 57px;
+    text-align: -webkit-right;
+    text-align: -moz-right;
+    padding-right: 94px;
 }
 .page-footer .version {
+    font-family: "PT Sans";
     color: #ceab8b;
-    font-size: 12px;
+    font-size: 11px;
     margin-bottom:0;
     text-align: right;
 }
@@ -548,9 +586,7 @@ p {
 .pagination {
     margin-bottom: 60px;
 }
-.page-content {
-    margin-right: 60px;
-}
+
 
 
 
@@ -807,7 +843,10 @@ p {
 
 /*slider*/
 #slider-wrap{
+    max-width: 895px;
+    max-height: 490px;
     width: 100%;
+    height: 100%;
 }
 #slider{
     width: 100%;
@@ -865,10 +904,10 @@ p {
 /*bvi*/
 
 .bvi-panel-open {
+    font-family: "PT Sans";
     color: #fff;
-    font-size: 30px;
+    font-size: 21px;
     line-height: 40px;
-    padding-left: 100px;
     text-decoration: none;
 }
 .bvi-panel-open:hover {
@@ -879,7 +918,8 @@ p {
 }
 .bvi-block {
     padding: 16px 0;
-    padding-left: 99px;
+    text-align: right;
+
 }
 .bvi-panel-open .fa-eye {
     font-size: 50px;
@@ -892,7 +932,10 @@ p {
     margin-bottom: 25px;
 }
 .news-date {
+    font-family: 'PT Sans';
     margin: 18px 0;
+    font-size: 12px;
+    color: #989798;
 }
 .slide {
     position: relative;
@@ -904,5 +947,8 @@ p {
     right: 30px;
     padding: 20px;
 }
-
+.news p {
+    font-family: "PT Sans";
+    font-size: 14px;
+}
 

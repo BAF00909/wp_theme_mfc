@@ -11,7 +11,6 @@
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" />
     <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS2 Feed" href="<?php bloginfo('rss2_url'); ?>" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-    <link rel="stylesheet" href="<?php echo THEME_DIR; ?>/style.css">
     <?php if (is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) wp_enqueue_script('comment-reply'); ?>
     <title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
 
@@ -25,15 +24,18 @@
 
 <header class="page-header">
     <div class="container-fluid clearfix">
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-offset-3 col-md-9  p-13">
+                <?php dynamic_sidebar( 'sidebar_top' ); ?>
+            </div>
+        </div>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                 <a href="<?php echo get_home_url(); ?>" class="logo-link"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.png" alt="">
                 <p class="slogan">государственные<br>и муниципальные услуги</p></a>
             </div>
 
-            <div class="col-xs-12 col-sm-12 col-md-9 p-13">
-                    <?php dynamic_sidebar( 'sidebar_top' ); ?>
-            </div>
 
             <div class="col-xs-12 col-sm-12 col-md-9">
 
