@@ -15,6 +15,14 @@ function enqueue_styles() {
     //wp_enqueue_style( 'screen-style' );
     wp_register_style( 'bvi', THEME_DIR . '/css/bvi.min.css', array(), 'all' );
     wp_enqueue_style( 'bvi' );
+    wp_register_style( 'font-awesome', THEME_DIR . '/font-awesome/css/font-awesome.min.css', array(), 'all' );
+    wp_enqueue_style( 'font-awesome' );
+    wp_register_style( 'owl', THEME_DIR . '/css/owl.carousel.min.css', array(), 'all' );
+    wp_enqueue_style( 'owl' );
+    wp_register_style( 'owl-default', THEME_DIR . '/css/owl.theme.default.min.css', array(), 'all' );
+    wp_enqueue_style( 'owl-default' );
+    wp_register_style( 'style', THEME_DIR . '/style.css', array(), 'all' );
+    wp_enqueue_style( 'style' );
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_styles' );
 
@@ -35,6 +43,8 @@ function enqueue_scripts() {
     wp_enqueue_script( 'bvi-panel' );
     wp_register_script( 'js-cookie', THEME_DIR .  '/js/js.cookie.js', array(), '1', true );
     wp_enqueue_script( 'js-cookie' );
+    wp_register_script( 'owl', THEME_DIR .  '/js/owl.carousel.min.js', array(), '1', true );
+    wp_enqueue_script( 'owl' );
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
 
@@ -228,93 +238,6 @@ add_action('customize_register', function($customizer){
             'type' => 'text',
         )
     );
-
-    //$customizer->add_section(
-    //    'example_section_three',
-    //    array(
-    //        'title' => 'Время Работы',
-    //        'description' => 'Время Работы учреждения',
-    //        'priority' => 36,
-    //    )
-    //);
-//
-    //$customizer->add_setting(
-    //    'first-day',
-    //    array('default' => 'с 8:00 до 19:00 ')
-    //);
-    //$customizer->add_control(
-    //    'first-day',
-    //    array(
-    //        'label' => 'ПН',
-    //        'section' => 'example_section_three',
-    //        'type' => 'text',
-    //    )
-    //);
-//
-    //$customizer->add_setting(
-    //    'second-days',
-    //    array('default' => 'с 8:00 до 19:00 ')
-    //);
-    //$customizer->add_control(
-    //    'second-days',
-    //    array(
-    //        'label' => 'Вт',
-    //        'section' => 'example_section_three',
-    //        'type' => 'text',
-    //    )
-    //);
-//
-    //$customizer->add_setting(
-    //    'third-days',
-    //    array('default' => 'с 8:00 до 19:00 ')
-    //);
-    //$customizer->add_control(
-    //    'third-days',
-    //    array(
-    //        'label' => 'Ср',
-    //        'section' => 'example_section_three',
-    //        'type' => 'text',
-    //    )
-    //);
-//
-    //$customizer->add_setting(
-    //    'fourth-days',
-    //    array('default' => 'с 8:00 до 19:00 ')
-    //);
-    //$customizer->add_control(
-    //    'fourth-days',
-    //    array(
-    //        'label' => 'Чт',
-    //        'section' => 'example_section_three',
-    //        'type' => 'text',
-    //    )
-    //);
-//
-    //$customizer->add_setting(
-    //    'fifth-days',
-    //    array('default' => 'с 8:00 до 19:00 ')
-    //);
-    //$customizer->add_control(
-    //    'fifth-days',
-    //    array(
-    //        'label' => 'Пт',
-    //        'section' => 'example_section_three',
-    //        'type' => 'text',
-    //    )
-    //);
-//
-    //$customizer->add_setting(
-    //    'sixth-day',
-    //    array('default' => 'с 9:00 до 13:00')
-    //);
-    //$customizer->add_control(
-    //    'sixth-day',
-    //    array(
-    //        'label' => 'СБ',
-    //        'section' => 'example_section_three',
-    //        'type' => 'text',
-    //    )
-    //);
 
 });
 

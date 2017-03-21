@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="<?php echo THEME_DIR; ?>/images/favicon.ico" />
+    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" />
     <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS2 Feed" href="<?php bloginfo('rss2_url'); ?>" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <link rel="stylesheet" href="<?php echo THEME_DIR; ?>/style.css">
@@ -23,21 +23,19 @@
 </head>
 <body <?php body_class(); ?> >
 
-<header class="page-header clearfix">
-    <div class="container clearfix">
+<header class="page-header">
+    <div class="container-fluid clearfix">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                <a href="<?php echo get_home_url(); ?>" class="logo-link"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.png" alt=""></a>
-                <p class="slogan">государственные<br>и муниципальные услуги</p>
+                <a href="<?php echo get_home_url(); ?>" class="logo-link"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.png" alt="">
+                <p class="slogan">государственные<br>и муниципальные услуги</p></a>
             </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-9 p-13">
+                    <?php dynamic_sidebar( 'sidebar_top' ); ?>
+            </div>
+
             <div class="col-xs-12 col-sm-12 col-md-9">
-                <div class="bvi-block">
-                    <a href="#" class="bvi-panel-open">Версия для слабовидящих</a>
-                </div>
-                <div class="page-header__top-panel">
-                    <span class="top-panel__info">﻿ Центр телефонного обслуживания: <a href="tel: <?php echo get_theme_mod('header-phone', '8 (473) 226-99-99'); ?>" ><?php echo get_theme_mod('header-phone', '8 (473) 226-99-99'); ?></a></span>
-                        <?php dynamic_sidebar( 'sidebar_top' ); ?>
-                </div>
 
                 <nav class="page-header-nav">
 
@@ -54,6 +52,7 @@
                 </nav>
 
                 <h1 class="title-text"><?php echo get_theme_mod('title-text', 'Название организации'); ?></h1>
+                <span class="top-panel__info">﻿ Центр телефонного обслуживания: <a href="tel: <?php echo get_theme_mod('header-phone', '8 (473) 226-99-99'); ?>" ><?php echo get_theme_mod('header-phone', '8 (473) 226-99-99'); ?></a></span>
                 </div>
             </div>
         </div>

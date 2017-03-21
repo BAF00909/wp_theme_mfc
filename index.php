@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <section class="page-content">
-    <div class="container clearfix">
+    <div class="container-fluid clearfix">
         <div class="row">
             <div class="col-md-3">
 
@@ -23,21 +23,55 @@
                     <header class="content-header">
 
                         <div id="slider-wrap">
-                            <div id="slider">
 
-                                <div class="slide" style="position: absolute; top: 0px; left: 0px; display: none;background-image: url(<?php echo esc_url( get_template_directory_uri() ); ?>/images/sl10.png);background-size: contain;background-position: center;background-repeat: no-repeat">
-                                   <!-- <img src="<?php esc_url( get_template_directory_uri() ); ?>/images/sl10.png" width="100%"  >-->
+                            <div class="owl-carousel owl-theme">
+                                <div class="slide">
+                                    <img src="<?php echo THEME_DIR; ?>/images/sl10.png">
+                                    <div class="slide__block-text">
+                                        <h2 class="title-text slide-title">Квартирный вопрос</h2>
+                                        <p class="slide-text ">
+                                            Зарегистрируем право собственности на дом, квартиру, земельный участок,
+                                            поставим недвижимость на кадастровый учет, выдадим разрешение  и многое 
+                                            другое.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="slide" style="position: absolute; top: 0px; left: 0px; display: none;background-image: url(<?php echo esc_url( get_template_directory_uri() ); ?>/images/sreda.png);background-size: contain;background-position: center;background-repeat: no-repeat">
-                                    <!--<img src="<?php esc_url( get_template_directory_uri() ); ?>/images/sreda.png" width="100%" >-->
+                                <div class="slide">
+                                    <img src="<?php echo THEME_DIR; ?>/images/sreda.png">
+                                    <div class="slide__block-text">
+                                        <h2 class="title-text slide-title">Квартирный вопрос</h2>
+                                        <p class="slide-text ">
+                                            Зарегистрируем право собственности на дом, квартиру, земельный участок,
+                                            поставим недвижимость на кадастровый учет, выдадим разрешение  и многое
+                                            другое.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="slide" style="position: absolute; top: 0px; left: 0px; display: none;background-image: url(<?php echo esc_url( get_template_directory_uri() ); ?>/images/sl12.png);background-size: contain;background-position: center;background-repeat: no-repeat">
-                                    <!--<img src="<?php esc_url( get_template_directory_uri() ); ?>/images/sl12.png" width="100%" >-->
+                                <div class="slide">
+                                    <img src="<?php echo THEME_DIR; ?>/images/sl10.png">
+                                    <div class="slide__block-text">
+                                        <h2 class="title-text slide-title">Квартирный вопрос</h2>
+                                        <p class="slide-text ">
+                                            Зарегистрируем право собственности на дом, квартиру, земельный участок,
+                                            поставим недвижимость на кадастровый учет, выдадим разрешение  и многое
+                                            другое.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="slide" style="position: absolute; top: 0px; left: 0px; display: block;background-image: url(<?php echo esc_url( get_template_directory_uri() ); ?>/images/sl2.png);background-size: contain;background-position: center;background-repeat: no-repeat">
-                                    <!--<img src="<?php esc_url( get_template_directory_uri() ); ?>/images/sl2.png" width="100%" >-->
+                                <div class="slide">
+                                    <img src="<?php echo THEME_DIR; ?>/images/sreda.png">
+                                    <div class="slide__block-text">
+                                        <h2 class="title-text slide-title">Квартирный вопрос</h2>
+                                        <p class="slide-text ">
+                                            Зарегистрируем право собственности на дом, квартиру, земельный участок,
+                                            поставим недвижимость на кадастровый учет, выдадим разрешение  и многое
+                                            другое.
+                                        </p>
+                                    </div>
                                 </div>
+
                             </div>
+
                         </div>
 
                     </header>
@@ -45,7 +79,7 @@
 
                         <div class="row clearfix">
                             <?php $catID = get_cat_ID( 'Новости' ); ?>
-                            <div class="col-md-12"><a href="<?php echo get_category_link( $catID ); ?>" class="btn_all-news">Все новости</a></div>
+                            <div class="col-md-12"><a href="<?php echo get_category_link( $catID ); ?>" class="btn_all-news">Новости</a></div>
                         </div>
 
                         <div class="row clearfix">
@@ -59,6 +93,7 @@
 
                                     <div class="col-md-4">
                                         <article class="news">
+                                            <p class="news-date"><?php the_time('j F Y'); ?></p>
                                             <a class="news__title" href="<?php the_permalink() ?>"><?php the_title(); ?></a>
                                             <p class="news__preview-text">
                                                 <?php the_excerpt(); ?>
@@ -81,7 +116,7 @@
                                 <h3 class="block-title"><a href="<?php echo get_category_link( $catIDdoc ); ?>" class="btn_all-news">Документы</a></h3>
                                 <?php query_posts('category_name=documents&showposts=5'); ?>
 
-                                <ul class="content-list">
+                                <ul class="content-list content-list--documents">
                                     <?php if (have_posts()) : ?>
                                         <?php while (have_posts()) :  the_post();  ?>
 
@@ -100,7 +135,7 @@
                                 ?>
                                 <h3 class="block-title"><a href="<?php echo get_home_url(); ?>/map/" class="btn_all-news">Отделы МФЦ</a></h3>
                                 <?php query_posts('category_name=filials&showposts=5'); ?>
-                                <ul class="content-list">
+                                <ul class="content-list content-list--filials">
                                     <?php if (have_posts()) : ?>
                                         <?php while (have_posts()) :  the_post();  ?>
                                             <li class="content-list__item">

@@ -2,8 +2,20 @@
 Theme Name: mfc2017
 Description: тема для портала 'Мои документы'
 Author: Бреус Александр
-Version: 2017.03.14
+Version: 2017.03.20
 */
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('/wp-content/themes/mfc2017/fonts/glyphicons') format('png');
+}
+@font-face {
+    font-family: 'PT Sans', sans-serif;
+    src: local("PT Sans"),
+    url(/wp-content/themes/mfc2017/fonts/PTS55F_2.ttf);
+}
+body {
+    font-family: 'PT Sans', sans-serif;
+}
 .wp-caption {
     background: #F1F1F1;
     line-height: 18px;
@@ -37,10 +49,6 @@ Version: 2017.03.14
 }
 .aligncenter {
     text-align: center;
-}
-@font-face {
-    font-family: 'Glyphicons Halflings';
-    src: url('themes/fonts/glyphicons') format('png');
 }
 .main-content {
     margin-bottom: 60px;
@@ -113,8 +121,11 @@ p {
 .logo-link {
     display: block;
     text-decoration: none;
-    margin: 15px 0 0 70px;
+    margin: 70px 0 0 130px;
    /* margin: 24px 0 0 118px;*/
+}
+.logo-link:hover {
+    text-decoration: none;
 }
 .slogan {
     color: #f26649;
@@ -128,10 +139,13 @@ p {
     padding: 6px 40px 6px 12px;
     margin-bottom: 10px;
 }
-.top-panel__info,
+.top-panel__info {
+    color: #989798;
+    font-size: 16px;
+}
 .top-panel__info a{
-    color: #fff;
-    font-size: 12px;
+    color: #e04e38;
+    font-size: 18px;
 }
 .account {
     float: right;
@@ -206,8 +220,8 @@ p {
 .menu-item a {
     color: #c39367;
     text-decoration: underline;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 27px;
+    line-height: 41px;
     font-weight: normal;
 }
 .menu-item a:hover {
@@ -215,7 +229,9 @@ p {
 }
 .title-text {
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 20px;
+    color: #623b2b;
+    margin-bottom: 0;
 }
 .block-relative {
     position: relative;
@@ -262,7 +278,7 @@ p {
 .bg-brown {
     background: #69321f;
     padding: 20px 58px 20px 20px;
-    min-height: 130px;
+    min-height: 180px;
 }
 .bg-grey {
     background-color: #eaeaea;
@@ -310,7 +326,7 @@ p {
     text-decoration: underline;
 }
 .page-footer .page-footer__phone {
-    display: block;
+    display: inline-block;
     font-size: 22px;
     color: #fff;
 }
@@ -325,7 +341,7 @@ p {
 }
 .search-field {
     background: #805038;
-    width: 150px;
+    width: 274px;
     padding: 6px 22px 6px 8px;
     border-radius: 12px;
     border: none;
@@ -440,6 +456,29 @@ p {
 .content-list .content-list__item a {
     color: #c39367;
     text-decoration: underline;
+    position: relative;
+}
+.content-list--documents,
+.content-list--filials {
+    list-style: none;
+}
+.content-list--documents .content-list__item {
+    padding-left: 24px;
+    margin-bottom: 10px;
+}
+.content-list--documents .content-list__item a {
+    display: block;
+    position: relative;
+}
+.content-list--documents .content-list__item a:before {
+    content: '';
+    display: block;
+    width: 21px;
+    height: 24px;
+    background-image: url(./images/icon-documents.png);
+    position: absolute;
+    left: -29px;
+    top: -2px;
 }
 .days-work {
     display: block;
@@ -482,12 +521,10 @@ p {
     margin-bottom: 57px;
 }
 .page-footer .version {
-    color: #e2e2e2;
+    color: #ceab8b;
     font-size: 12px;
-    position:absolute;
-    bottom:-87px;
-    right:5px;
     margin-bottom:0;
+    text-align: right;
 }
 
 .breadcrumbs {
@@ -511,7 +548,9 @@ p {
 .pagination {
     margin-bottom: 60px;
 }
-
+.page-content {
+    margin-right: 60px;
+}
 
 
 
@@ -826,34 +865,44 @@ p {
 /*bvi*/
 
 .bvi-panel-open {
-    color: #000;
-    font-size: 23px;
+    color: #fff;
+    font-size: 30px;
     line-height: 40px;
     padding-left: 100px;
     text-decoration: none;
 }
 .bvi-panel-open:hover {
-    color: #000;
+    color: #fff;
 }
 .bvi-panel-open:visited {
-    color: #000;
+    color: #fff;
 }
 .bvi-block {
-    position: relative;
     padding: 16px 0;
+    padding-left: 99px;
 }
-.bvi-panel-open:before {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 40px;
-    background-image: url(./images/eye.png);
-    background-size: contain;
-    background-repeat: no-repeat;
+.bvi-panel-open .fa-eye {
+    font-size: 50px;
+    vertical-align: bottom;
+}
+.p-13 {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    background-color: #68412f;
+    margin-bottom: 25px;
+}
+.news-date {
+    margin: 18px 0;
+}
+.slide {
+    position: relative;
+}
+.slide__block-text {
+    width: 45%;
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 50px;
+    right: 30px;
+    padding: 20px;
 }
-
 
 

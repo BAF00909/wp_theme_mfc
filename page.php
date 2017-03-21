@@ -9,7 +9,7 @@
 <?php get_header(); ?>
 
 <section class="page-content clearfix">
-    <div class="container clearfix">
+    <div class="container-fluid clearfix">
         <div class="row">
             <div class="col-md-3">
                 
