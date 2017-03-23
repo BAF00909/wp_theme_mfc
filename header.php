@@ -22,14 +22,18 @@
 </head>
 <body <?php body_class(); ?> >
 
-<header class="page-header">
-    <div class="container-fluid clearfix">
-
+<header class="page-header clearfix">
+   
+    <div class="container clearfix">
+        
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-offset-3 col-md-9  p-13">
-                <?php dynamic_sidebar( 'sidebar_top' ); ?>
+            <div class=" col-xs-12 col-sm-12 col-md-offset-3 col-md-9 col-lg-offset-3 col-lg-9 ">
+                <div class="p-13">
+                    <?php dynamic_sidebar( 'sidebar_top' ); ?>
+                </div>
             </div>
         </div>
+        
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                 <a href="<?php echo get_home_url(); ?>" class="logo-link"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.png" alt="">

@@ -5,7 +5,7 @@
 
 get_header(); ?>
 
-    <div class="container-fluid clearfix">
+    <div class="container clearfix">
         <div class="row">
             <div class="col-md-3">
 

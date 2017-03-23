@@ -2,7 +2,7 @@
 Theme Name: mfc2017
 Description: тема для портала 'Мои документы'
 Author: Бреус Александр
-Version: 2017.03.21
+Version: 2017.03.23
 */
 
 @font-face {
@@ -61,7 +61,6 @@ body {
 }
 .main-content {
     margin-bottom: 60px;
-    padding-right: 70px;
 }
 p {
     margin: 0;
@@ -126,13 +125,13 @@ p {
     clear: both;
 }
 .page-header {
-    margin-bottom: 30px;
+    margin-bottom: 76px;
 }
 .logo-link {
     display: block;
     text-decoration: none;
     text-align: right;
-    padding-right: 18%;
+    padding-right: 14%;
 }
 .logo-link:hover {
     text-decoration: none;
@@ -142,7 +141,7 @@ p {
     font-size: 12px;
     line-height: 12px;
     text-align: right;
-    margin-right: 7%;
+    margin-right: 8.93%;
 }
 .page-header__top-panel {
     background: #69321f;
@@ -172,9 +171,7 @@ p {
     position: relative;
     padding-right: 97px;
 }
-#main-menu {
-    text-align: right;
-}
+
 #main-menu .menu-item {
     display: inline-block;
     position: relative;
@@ -189,9 +186,6 @@ p {
     font-weight: normal;
 }
 #main-menu .menu-item a:hover {
-    color: #000;
-}
-#main-menu .menu-item a:visited {
     color: #623B2A;
 }
 
@@ -247,9 +241,7 @@ p {
 .menu-item a:hover {
     color: #623B2A;
 }
-.menu-item a:visited {
-    color: #623B2A;
-}
+
 .title-text {
     font-family: 'Circe MD';
     text-transform: uppercase;
@@ -299,13 +291,12 @@ p {
     float: left;
     width: 50%;
 }
-.news {
-    padding: 10px;
-}
+
 .bg-brown {
     background: #69321f;
-    padding: 20px 100px 20px 20px;
-    min-height: 180px;
+    /*padding: 20px 100px 20px 20px;*/
+    padding-top: 20px;
+    min-height: 140px;
 }
 .bg-grey {
     background-color: #eaeaea;
@@ -369,12 +360,12 @@ p {
 }
 .searchform {
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     text-align: right;
 }
 .search-field {
     background: #805038;
-    width: 274px;
+    width: 100%;
     padding: 6px 22px 6px 8px;
     border-radius: 12px;
     border: none;
@@ -442,7 +433,6 @@ p {
 .news .news__title {
     font-family: 'PT Sans';
     font-size: 18px;
-    font-weight: 600;
     line-height: 17px;
     text-align: left;
     color: #e04e38;
@@ -467,7 +457,7 @@ p {
     display: block;
 }
 .btn_all-news--sm {
-    font-size: 14px;
+    font-size: 16px;
 }
 .btn_all-news:visited {
     color: #623b2a;
@@ -495,7 +485,7 @@ p {
 }
 .content-list .content-list__item a {
     font-family: "PT Sans";
-    font-size: 11px;
+    font-size: 14px;
     color: #c39367;
     text-decoration: underline;
     position: relative;
@@ -506,13 +496,17 @@ p {
 }
 .content-list--documents .content-list__item {
     margin-bottom: 10px;
+    position: relative;
 }
 .content-list--documents .content-list__item a {
     display: block;
     position: relative;
+    padding-left: 10%;
 }
-.content-list--documents .content-list__item a .fa-files-o{
+.content-list--documents .content-list__item .fa-files-o{
     font-size: 20px;
+    color: #c39367;
+    position: absolute;
 }
 .days-work {
     display: block;
@@ -549,13 +543,10 @@ p {
     font-size: 16px;
 }
 .sidebar {
-    padding-right: 24%;
+    padding-right: 21.8%;
 }
 .content-header {
     margin-bottom: 57px;
-    text-align: -webkit-right;
-    text-align: -moz-right;
-    padding-right: 94px;
 }
 .page-footer .version {
     font-family: "PT Sans";
@@ -902,12 +893,14 @@ p {
     opacity:1;}
 
 /*bvi*/
-
+.bvi-block {
+    padding-top: 20px;
+}
 .bvi-panel-open {
     font-family: "PT Sans";
     color: #fff;
-    font-size: 21px;
-    line-height: 40px;
+    font-size: 19px;
+    line-height: 47px;
     text-decoration: none;
 }
 .bvi-panel-open:hover {
@@ -916,20 +909,20 @@ p {
 .bvi-panel-open:visited {
     color: #fff;
 }
-.bvi-block {
-    padding: 16px 0;
-    text-align: right;
 
-}
 .bvi-panel-open .fa-eye {
     font-size: 50px;
     vertical-align: bottom;
 }
 .p-13 {
+    width: 100%;
+    float: right;
     padding-top: 13px;
     padding-bottom: 13px;
     background-color: #68412f;
     margin-bottom: 25px;
+    text-align: right;
+    padding-right: 5%;
 }
 .news-date {
     font-family: 'PT Sans';

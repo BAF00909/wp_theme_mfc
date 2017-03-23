@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <section class="page-content">
-    <div class="container-fluid clearfix">
+    <div class="container clearfix">
         <div class="row">
             <div class="col-md-3">
 
@@ -93,7 +93,7 @@
 
                                     <div class="col-md-4">
                                         <article class="news">
-                                            <p class="news-date"><?php echo get_the_date('j. n. Y'); ?></p>
+                                            <p class="news-date"><?php echo get_the_date('d.m.Y'); ?></p>
                                             <a class="news__title" href="<?php the_permalink() ?>"><?php the_title(); ?></a>
                                             <p class="news__preview-text">
                                                 <?php the_excerpt(); ?>
@@ -121,7 +121,7 @@
                                         <?php while (have_posts()) :  the_post();  ?>
 
                                             <li class="content-list__item">
-                                                <a href="<?php the_permalink() ?>"><i class="fa fa-files-o" aria-hidden="true"></i>     <?php the_title() ?></a>
+                                                <i class="fa fa-files-o" aria-hidden="true"></i>  <a href="<?php the_permalink() ?>"><?php the_title() ?></a>
                                             </li>
 
                                         <?php endwhile; endif; ?>
