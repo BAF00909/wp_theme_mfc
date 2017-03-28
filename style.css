@@ -1,8 +1,10 @@
 /*
-Theme Name: mfc2017
+Theme Name: MFC 2017
 Description: тема для портала 'Мои документы'
-Author: Бреус Александр
-Version: 2017.03.23
+Author:  Netvox Lab
+Author URI: http://netvoxlab.com/
+Text Domain: mfc2017
+Version: 2017.03.28
 */
 
 @font-face {
@@ -10,22 +12,18 @@ Version: 2017.03.23
     src: url('/wp-content/themes/mfc2017/fonts/glyphicons') format('png');
 }
 @font-face {
-    font-family: 'PT Sans', sans-serif;
-    src: local("PT Sans"),
-    url(/wp-content/themes/mfc2017/fonts/PTS55F_2.ttf);
-}
-@font-face {
     font-family: 'Circe MD';
-    src: local("PT Sans"),
+    src: local('Arial'),
     url(/wp-content/themes/mfc2017/fonts/CRC65PMD.otf);
 }
 body {
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 .wp-caption {
+    max-width: 100%;
     background: #F1F1F1;
     line-height: 18px;
     margin-bottom: 20px;
@@ -125,7 +123,7 @@ p {
     clear: both;
 }
 .page-header {
-    margin-bottom: 76px;
+    margin-bottom: 58px;
 }
 .logo-link {
     display: block;
@@ -149,12 +147,13 @@ p {
     margin-bottom: 10px;
 }
 .top-panel__info {
-    font-family: 'PT Sans';
+    font-family: 'Arial';
     color: #989798;
     font-size: 14px;
+    margin-left: -4px;
 }
 .top-panel__info a{
-    font-family: 'PT Sans';
+    font-family: 'Arial';
     color: #e04e38;
     font-size: 14px;
 }
@@ -167,7 +166,7 @@ p {
     text-decoration: none;
 }
 .page-header-nav {
-    margin-bottom: 35px;
+    margin-bottom: 49px;
     position: relative;
     padding-right: 97px;
 }
@@ -177,7 +176,7 @@ p {
     position: relative;
 }
 #main-menu .menu-item a{
-    font-family: 'PT Sans';
+    font-family: 'Arial';
     display: block;
     color: #c39367;
     text-decoration: underline;
@@ -196,7 +195,7 @@ p {
     right: -18px;
     top: 4px;
     height: 22px;
-    width: 2px;
+    width: 1px;
     background-color: #c39367;
 }
 #main-menu .menu-item:last-child:after {
@@ -235,7 +234,7 @@ p {
     color: #c39367;
     text-decoration: underline;
     font-size: 20px;
-    line-height: 41px;
+    line-height: 20px;
     font-weight: normal;
 }
 .menu-item a:hover {
@@ -344,7 +343,7 @@ p {
     text-decoration: underline;
 }
 .page-footer .page-footer__phone {
-    font-family: "PT Sans";
+    font-family: 'Arial';
     display: inline-block;
     font-size: 23px;
     color: #fff;
@@ -353,7 +352,7 @@ p {
     text-decoration: none;
 }
 .page-footer p {
-    font-family: "PT Sans";
+    font-family: 'Arial';
     font-size: 11px;
     color: #d99668;
     margin-bottom: 18px;
@@ -372,6 +371,10 @@ p {
     font-size: 11px;
     color: #fff;
     position: relative;
+}
+.search-field:focus {
+    outline: none;
+    color: #fff;
 }
 .screen-reader-text {
     position: relative;
@@ -420,7 +423,7 @@ p {
     margin-bottom: 10px;
 }
 .news a {
-    font-family: "PT Sans";
+    font-family: 'Arial';
     font-size: 14px;
     display: block;
     text-align: left;
@@ -431,7 +434,7 @@ p {
     margin-top: 5px;
 }
 .news .news__title {
-    font-family: 'PT Sans';
+    font-family: 'Arial';
     font-size: 18px;
     line-height: 17px;
     text-align: left;
@@ -447,7 +450,7 @@ p {
 }
 
 .btn_all-news {
-    font-family: "PT Sans";
+    font-family: 'Arial';
     color: #623b2a;
     font-style: italic;
     text-decoration: underline;
@@ -484,7 +487,7 @@ p {
     margin-bottom: 50px;
 }
 .content-list .content-list__item a {
-    font-family: "PT Sans";
+    font-family: 'Arial';
     font-size: 14px;
     color: #c39367;
     text-decoration: underline;
@@ -549,7 +552,7 @@ p {
     margin-bottom: 57px;
 }
 .page-footer .version {
-    font-family: "PT Sans";
+    font-family: 'Arial';
     color: #ceab8b;
     font-size: 11px;
     margin-bottom:0;
@@ -715,6 +718,7 @@ p {
     margin-right: 0;
     display: block;
     text-align: right;
+    margin-bottom: 20px;
 }
 #menu-sidebar li{
     display: block;
@@ -897,9 +901,9 @@ p {
     padding-top: 20px;
 }
 .bvi-panel-open {
-    font-family: "PT Sans";
+    font-family: 'Arial';
     color: #fff;
-    font-size: 19px;
+    font-size: 25px;
     line-height: 47px;
     text-decoration: none;
 }
@@ -920,13 +924,14 @@ p {
     padding-top: 13px;
     padding-bottom: 13px;
     background-color: #68412f;
-    margin-bottom: 25px;
+    margin-bottom: 41px;
     text-align: right;
     padding-right: 5%;
 }
 .news-date {
-    font-family: 'PT Sans';
+    font-family: 'Arial';
     margin: 18px 0;
+    margin-bottom: 0;
     font-size: 12px;
     color: #989798;
 }
@@ -941,7 +946,26 @@ p {
     padding: 20px;
 }
 .news p {
-    font-family: "PT Sans";
+    font-family: 'Arial';
     font-size: 14px;
 }
-
+.comment-content img[height],
+.entry-content img,
+.entry-summary img,
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"],
+#site-header img {
+    height: auto;
+}
+.comment-content img,
+.entry-content img,
+.entry-summary img,
+#site-header img,
+.widget img,
+.wp-caption {
+    max-width: 100%;
+}
+.comment-form-comment label{
+    display: block;
+}

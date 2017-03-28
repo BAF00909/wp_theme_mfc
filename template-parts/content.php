@@ -1,8 +1,6 @@
 <?php
 /**
  * Template part for displaying posts.
- *
- *
  * @package mfc2017
  */
 
@@ -29,6 +27,10 @@
         ?>
     </div>
     <footer class="entry-footer">
+        <ul class="commentlist">
+            <?php wp_list_comments( 'type=comment&callback=mytheme_comment' ); ?>
+        </ul>
+        <?php comment_form(); ?>
         <?php edit_post_link( __( 'Edit', 'mfc2017' ), '<span class="edit-link">', '</span>' ); ?>
         <?php the_tags('<ul><li>','</li><li>','</li></ul>'); ?>
     </footer>
