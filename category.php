@@ -30,15 +30,32 @@
                                 <div class="row clearfix row--news">
 
                                     <div class="col-md-4">
-                                        <?php the_post_thumbnail(array(240,170)); ?>
+                                        <div class="image-news">
+                                            <?php
+
+                                            $img = get_the_post_thumbnail($id,array(269,180));
+
+                                            if($img == ''){
+                                                echo ' <img src="'.THEME_DIR.'/images/default-img.jpg">';
+                                            } else {
+                                                echo $img;
+                                            }
+
+                                            ?>
+                                        </div>
                                     </div>
 
                                     <div class="col-md-8">
-                                        <p class="news__date"><?php the_time('j F Y'); ?></p>
-                                        <a class="news__title" href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-                                        <p class="news__preview-text">
-                                            <?php the_excerpt(); ?>
-                                        </p>
+                                        <article class="all-news-list">
+                                            <p class="news-date"><?php echo get_the_date('d.m.Y'); ?></p>
+                                            <a class="news__title" href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+                                            <p class="news__preview-text">
+                                                <?php the_excerpt(); ?>
+                                            </p>
+                                            <div class="arrow">
+                                                <a class="btn custom-readmore" href="<?php the_permalink() ?>">Подробнее</a>
+                                            </div>
+                                        </article>
                                     </div>
 
                                 </div>

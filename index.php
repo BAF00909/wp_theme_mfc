@@ -93,12 +93,27 @@
 
                                     <div class="col-md-4">
                                         <article class="news">
+                                            <div class="image-news">
+                                                <?php
+
+                                                $img = get_the_post_thumbnail($id,array(269,180));
+
+                                                if($img == ''){
+                                                    echo ' <img src="'.THEME_DIR.'/images/default-img.jpg">';
+                                                } else {
+                                                    echo $img;
+                                                }
+
+                                                ?>
+                                            </div>
                                             <p class="news-date"><?php echo get_the_date('d.m.Y'); ?></p>
                                             <a class="news__title" href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-                                            <p class="news__preview-text">
+                                           <!-- <p class="news__preview-text">
                                                 <?php the_excerpt(); ?>
-                                            </p>
-                                            <a class="btn custom-readmore" href="<?php the_permalink() ?>">Подробнее ></a>
+                                            </p>-->
+                                           <div class="arrow"> 
+                                               <a class="btn custom-readmore" href="<?php the_permalink() ?>">Подробнее</a>
+                                           </div>
                                         </article>
                                     </div>
 
