@@ -107,13 +107,15 @@
                                                 ?>
                                             </div>
                                             <p class="news-date"><?php echo get_the_date('d.m.Y'); ?></p>
-                                            <a class="news__title" href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+                                            <a class="news__title" href="<?php the_permalink() ?>"><?php trim_title_words(20, '...'); ?></a>
                                            <!-- <p class="news__preview-text">
                                                 <?php the_excerpt(); ?>
                                             </p>-->
-                                           <div class="arrow"> 
-                                               <a class="btn custom-readmore" href="<?php the_permalink() ?>">Подробнее</a>
-                                           </div>
+                                            <div>
+                                                <div class="arrow">
+                                                    <a class="btn custom-readmore" href="<?php the_permalink() ?>">Подробнее</a>
+                                                </div>
+                                            </div>
                                         </article>
                                     </div>
 

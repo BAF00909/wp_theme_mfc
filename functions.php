@@ -505,6 +505,17 @@ function mytheme_comment($comment, $args, $depth) {
     <?php
 }
 
+function trim_title_words($count, $after) {
+    $title = get_the_title();
+    $words = explode(' ', $title);
+    if (count($words) > $count) {
+        array_splice($words, $count);
+        $title = implode(' ', $words);
+    }
+    else $after = '';
+    echo $title . $after;
+}
+
 
 
 ?>

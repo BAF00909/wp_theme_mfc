@@ -22,7 +22,7 @@
 </head>
 <body <?php body_class(); ?> >
 
-<header class="page-header clearfix">
+<header class="page-header clearfix" id="header">
    
     <div class="container clearfix">
         
@@ -58,7 +58,7 @@
                 </nav>
 
                 <h1 class="title-text"><?php echo get_theme_mod('title-text', 'Название организации'); ?></h1>
-                <span class="top-panel__info">﻿ Центр телефонного обслуживания: <a href="tel: <?php echo get_theme_mod('header-phone', '8 (473) 226-99-99'); ?>" ><?php echo get_theme_mod('header-phone', '8 (473) 226-99-99'); ?></a></span>
+                <span class="top-panel__info">﻿ Центр телефонного обслуживания: <a href="tel: <?php echo get_theme_mod('header-phone', ''); ?>" ><?php echo get_theme_mod('header-phone', ''); ?></a></span>
                 </div>
             </div>
         </div>

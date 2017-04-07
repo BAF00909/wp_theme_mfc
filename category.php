@@ -48,7 +48,7 @@
                                     <div class="col-md-8">
                                         <article class="all-news-list">
                                             <p class="news-date"><?php echo get_the_date('d.m.Y'); ?></p>
-                                            <a class="news__title" href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+                                            <a class="news__title news__title--color" href="<?php the_permalink() ?>"><?php the_title(); ?></a>
                                             <p class="news__preview-text">
                                                 <?php the_excerpt(); ?>
                                             </p>

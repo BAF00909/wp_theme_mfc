@@ -4,8 +4,8 @@
         <div class="row clearfix">
                     <div class="col-md-3 col-md-offset-3 bg-brown">
                         <p>﻿Техническая поддержка сайта</p>
-                        <a href="mailto:<?php echo get_theme_mod('footer-email', 'info@mfc.ru'); ?>" class="page-footer__mail"><?php echo get_theme_mod('footer-email', 'info@mfc.ru'); ?></a>
-                        <a href="tel:<?php echo get_theme_mod('footer-phone', '8 (473) 226-99-99'); ?>" class="page-footer__phone" ><?php echo get_theme_mod('footer-phone', '8 (473) 226-99-99'); ?></a>
+                        <a href="mailto:<?php echo get_theme_mod('footer-email', ''); ?>" class="page-footer__mail"><?php echo get_theme_mod('footer-email', ''); ?></a>
+                        <a href="tel:<?php echo get_theme_mod('footer-phone', ''); ?>" class="page-footer__phone" ><?php echo get_theme_mod('footer-phone', ''); ?></a>
                     </div>
 
                     <div class="col-md-4 bg-brown">

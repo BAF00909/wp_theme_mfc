@@ -4,7 +4,7 @@ Description: тема для портала 'Мои документы'
 Author:  Netvox Lab
 Author URI: http://netvoxlab.com/
 Text Domain: mfc2017
-Version: 2017.03.29
+Version: 2017.04.07
 */
 
 @font-face {
@@ -417,8 +417,9 @@ p {
 }
 .news {
     margin-bottom: 30px;
-    min-height: 300px;
+    min-height: 350px;
     position: relative;
+    padding-bottom: 40px;
 }
 .news__date {
     font-size: 12px;
@@ -1017,8 +1018,9 @@ img[class*="attachment-"],
     /*height: auto;*/
 }
 .all-news-list {
-    min-height: 170px;
+    min-height: 175px;
     position: relative;
+    padding-bottom: 40px;
 }
 .all-news-list .custom-readmore{
     padding: 7px;
@@ -1028,7 +1030,6 @@ img[class*="attachment-"],
     color: #623b2a;
 }
 .all-news-list .news__title {
-    font-weight: 500;
     font-size: 16px;
     color: #333;
     text-decoration: none;
@@ -1040,4 +1041,23 @@ img[class*="attachment-"],
 .custom-readmore:hover {
     color: #623b2a;
     text-decoration: none;
+}
+.all-news-list a.news__title--color {
+    font-size: 18px;
+    line-height: 18px;
+    color: #333;
+}
+.all-news-list a.news__title--color:hover {
+    color: #333;
+}
+.all-news-list .news-date {
+    margin:0;
+    margin-bottom: 10px;
+    line-height: 10px;
+}
+.nav-links .page-numbers {
+    color: #c39267;
+}
+.nav-links .current {
+    color: #623b2a;
 }
