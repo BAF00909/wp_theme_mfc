@@ -4,7 +4,7 @@ Description: тема для портала 'Мои документы'
 Author:  Netvox Lab
 Author URI: http://netvoxlab.com/
 Text Domain: mfc2017
-Version: 2017.04.07
+Version: 2017.04.10
 */
 
 @font-face {
@@ -70,8 +70,8 @@ p {
 .list-title-news{
     margin: 0;
     position: relative;
-    padding-left: 15px;
-    margin-bottom: 10px;
+    padding-left: 20px;
+    margin-bottom: 23px;
 }
 .list-title-news a {
     color: #6e3219;
@@ -122,13 +122,20 @@ p {
     clear: both;
 }
 .page-header {
-    margin-bottom: 58px;
+    margin: 0;
+    margin-bottom: 0px;
+    padding: 0;
+    border: 0;
+}
+.block-logo {
+    padding-top: 35px;
 }
 .logo-link {
     display: block;
     text-decoration: none;
     text-align: right;
     padding-right: 14%;
+    margin-bottom: 65px;
 }
 .logo-link:hover {
     text-decoration: none;
@@ -168,7 +175,7 @@ p {
     text-decoration: none;
 }
 .page-header-nav {
-    margin-bottom: 49px;
+    margin-bottom: 21px;
     position: relative;
     padding-right: 97px;
 }
@@ -235,7 +242,7 @@ p {
 .menu-item a {
     color: #c39367;
     text-decoration: underline;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 20px;
     font-weight: normal;
 }
@@ -252,6 +259,7 @@ p {
 }
 .page-header .title-text {
     padding-right: 67px;
+    margin-bottom: 68px;
 }
 .block-relative {
     position: relative;
@@ -295,7 +303,6 @@ p {
 
 .bg-brown {
     background: #69321f;
-    /*padding: 20px 100px 20px 20px;*/
     padding-top: 20px;
     min-height: 140px;
 }
@@ -574,6 +581,11 @@ p {
 }
 .entry-title {
     margin: 0;
+    margin-bottom: 30px;
+    line-height:  1em;
+}
+.review-title {
+    margin-top: 0;
 }
 .bvi-panel-close- {
     border: 2px solid;
@@ -585,7 +597,7 @@ p {
     font-size: 16px;
 }
 .sidebar {
-    padding-right: 21.8%;
+    padding-right: 17.8%;
 }
 .content-header {
     margin-bottom: 57px;
@@ -599,7 +611,7 @@ p {
 }
 
 .breadcrumbs {
-    margin-bottom: 30px;
+    margin-bottom: 16px;
 }
 .breadcrumbs span {
     padding: 0 2px;
@@ -611,7 +623,7 @@ p {
     color: #000;
 }
 .entry-header {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
 .post {
     margin-bottom: 60px;
@@ -631,7 +643,7 @@ p {
         text-align: right;
     }
     .slogan {
-       /* margin-right: 100px;*/
+        /* margin-right: 100px;*/
         margin-right: 19px;
         margin-bottom: 10px;
     }
@@ -757,7 +769,7 @@ p {
     margin-right: 0;
     display: block;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 #menu-sidebar li{
     display: block;
@@ -830,10 +842,12 @@ p {
     left: 30px;
     font-weight: normal;
 }
-
+.menu .sub-menu .menu-item {
+    margin-bottom: 0;
+}
 .menu .sub-menu .menu-item a {
     font-size: 13px;
-    padding: 12px 12px 12px 30px;
+    padding: 10px 0px 6px 30px;
     color: #69331f;
     text-transform: uppercase;
     text-decoration: none;
@@ -942,7 +956,7 @@ p {
 .bvi-panel-open {
     font-family: 'Arial';
     color: #fff;
-    font-size: 25px;
+    font-size: 24px;
     line-height: 47px;
     text-decoration: none;
 }
@@ -963,9 +977,20 @@ p {
     padding-top: 13px;
     padding-bottom: 13px;
     background-color: #68412f;
-    margin-bottom: 41px;
+    margin-bottom: 8px;
     text-align: right;
     padding-right: 5%;
+    min-height: 46px;
+}
+.top-panel__left {
+    width: 70%;
+    float: left;
+    text-align: left;
+    padding-left: 10px;
+}
+.top-panel__right {
+    width: 30%;
+    float: left;
 }
 .news-date {
     font-family: 'Arial';
@@ -1060,4 +1085,15 @@ img[class*="attachment-"],
 }
 .nav-links .current {
     color: #623b2a;
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+}
+.pr-non {
+    padding-right: 0;
+}
+.pl-15 {
+    padding-left: 15px;
 }

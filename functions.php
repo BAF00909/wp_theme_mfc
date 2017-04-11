@@ -19,7 +19,7 @@ function enqueue_styles() {
     wp_enqueue_style( 'owl' );
     wp_register_style( 'owl-default', THEME_DIR . '/css/owl.theme.default.min.css', array(), 'all' );
     wp_enqueue_style( 'owl-default' );
-    wp_register_style( 'style', THEME_DIR . '/style.css', array(), 'all' );
+    wp_register_style( 'style', THEME_DIR . '/style.css', array(), '2017.04.10' );
     wp_enqueue_style( 'style' );
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_styles' );
@@ -97,6 +97,19 @@ function true_register_wp_sidebars() {
             'after_title' => '</h3>'
         )
     );
+
+    register_sidebar(
+        array(
+            'id' => 'banners_block',
+            'name' => 'Баннер',
+            'description' => 'Перетащите сюда виджеты, чтобы добавить их в сайдбар.',
+            'before_widget' => '<span id="%1$s" class="authorization">',
+            'after_widget' => '</span>',
+            'before_title' => '<h3 class="widget-title">',
+            'after_title' => '</h3>'
+        )
+    );
+
 }
 
 add_action( 'widgets_init', 'true_register_wp_sidebars' );
@@ -113,9 +126,7 @@ add_filter('excerpt_more', function($more) {
 
 
 //customizer
-add_action('admin_menu', function(){
-    add_theme_page('Настроить', 'Настроить', 'edit_theme_options', 'customize.php');
-});
+
 add_action('customize_register', function($customizer){
     //footer
     $customizer->add_section(

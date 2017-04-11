@@ -30,10 +30,6 @@ get_header(); ?>
             </div>
             <div class="col-md-9">
 
-                <div class="breadcrumbs">
-                    <?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
-                </div>
-
                 <?php printf( __( 'Результаты поиска: %s', 'mfc2017' ), '' . get_search_query() . '' ); // Динамический заголовок поиска?>
                 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); // Начало цикла ?>
 
