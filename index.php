@@ -154,7 +154,13 @@
         </div>
     </div>
 </div>
+</div>
+</div>
+</div>
+
 <!-- new end-->
+
+
 
 
 <?php get_footer(); ?>

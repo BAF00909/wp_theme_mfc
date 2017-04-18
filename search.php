@@ -12,23 +12,7 @@ get_header(); ?>
 
     <div class="container clearfix">
         <div class="row">
-            <div class="col-md-3">
-
-                <!--Аккордион-->
-
-                <?php if ( is_active_sidebar( 'true_side' ) ) : ?>
-
-                    <div id="true-side" class="sidebar">
-
-                        <?php dynamic_sidebar( 'true_side' ); ?>
-
-                    </div>
-
-                <?php endif; ?>
-
-
-            </div>
-            <div class="col-md-9">
+            <div class="col-md-12">
 
                 <?php printf( __( 'Результаты поиска: %s', 'mfc2017' ), '' . get_search_query() . '' ); // Динамический заголовок поиска?>
                 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); // Начало цикла ?>
@@ -58,6 +42,8 @@ get_header(); ?>
         </div>
     </div>
 
-
+    </div>
+    </div>
+    </div>
 
 <?php get_footer(); ?>

@@ -42,22 +42,7 @@
                 });
         });
     });
-
     
-
-    jQuery(function ($) {
-        $(document).ready(function () {
-
-            var docHeight = $(window).height();
-            var footerHeight = $('.page-footer').height();
-            var footerTop = $('.page-footer').position().top + footerHeight;
-
-            if (footerTop < docHeight) {
-                $('.page-footer').css('margin-top', 10 + (docHeight - footerTop) + 'px');
-            }
-        });
-
-    });
 
 
     jQuery(function ($) {

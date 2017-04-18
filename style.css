@@ -4,7 +4,7 @@ Description: тема для портала 'Мои документы'
 Author:  Netvox Lab
 Author URI: http://netvoxlab.com/
 Text Domain: mfc2017
-Version: 2017.04.10
+Version: 2017.04.18
 */
 
 @font-face {
@@ -21,6 +21,7 @@ body {
     width: 100%;
     margin: 0 auto;
     font-family: 'Arial', sans-serif;
+
 }
 .wp-caption {
     max-width: 100%;
@@ -1096,4 +1097,18 @@ img[class*="attachment-"],
 }
 .pl-15 {
     padding-left: 15px;
+}
+html {
+    height: 100%;
+}
+body {
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 140px;
+}
+.footer-wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
 }
