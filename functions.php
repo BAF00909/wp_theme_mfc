@@ -19,7 +19,7 @@ function enqueue_styles() {
     wp_enqueue_style( 'owl' );
     wp_register_style( 'owl-default', THEME_DIR . '/css/owl.theme.default.min.css', array(), 'all' );
     wp_enqueue_style( 'owl-default' );
-    wp_register_style( 'style', THEME_DIR . '/style.css', array(), '2017.04.18' );
+    wp_register_style( 'style', THEME_DIR . '/style.css', array(), '2017.04.20' );
     wp_enqueue_style( 'style' );
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_styles' );

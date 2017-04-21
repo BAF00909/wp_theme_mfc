@@ -4,7 +4,7 @@ Description: тема для портала 'Мои документы'
 Author:  Netvox Lab
 Author URI: http://netvoxlab.com/
 Text Domain: mfc2017
-Version: 2017.04.18
+Version: 2017.04.20
 */
 
 @font-face {
@@ -136,7 +136,7 @@ p {
     text-decoration: none;
     text-align: right;
     padding-right: 14%;
-    margin-bottom: 65px;
+    margin-bottom: 35px;
 }
 .logo-link:hover {
     text-decoration: none;
@@ -155,13 +155,13 @@ p {
 }
 .top-panel__info {
     font-family: 'Arial';
-    color: #989798;
+    color: #fff;
     font-size: 14px;
     margin-left: -4px;
 }
 .top-panel__info a{
     font-family: 'Arial';
-    color: #e04e38;
+    color: #fff;
     font-size: 14px;
 }
 .top-panel__info a:hover {
@@ -176,7 +176,7 @@ p {
     text-decoration: none;
 }
 .page-header-nav {
-    margin-bottom: 21px;
+    margin-bottom: 31px;
     position: relative;
     padding-right: 97px;
 }
@@ -260,7 +260,7 @@ p {
 }
 .page-header .title-text {
     padding-right: 67px;
-    margin-bottom: 68px;
+    margin-bottom: 50px;
 }
 .block-relative {
     position: relative;
@@ -616,6 +616,7 @@ p {
 }
 .breadcrumbs span {
     padding: 0 2px;
+    padding-left: 0;
     color: #aaa;
     text-decoration: none;
     font-size: 11px;
@@ -1111,4 +1112,7 @@ body {
     bottom: 0;
     width: 100%;
     left: 0;
+}
+.top-panel__right a{
+    color: #fff;
 }
