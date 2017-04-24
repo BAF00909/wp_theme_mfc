@@ -981,14 +981,14 @@ p {
     background-color: #68412f;
     margin-bottom: 8px;
     text-align: right;
-    padding-right: 5%;
+    padding-right: 20px;
+    padding-left: 20px;
     min-height: 46px;
 }
 .top-panel__left {
     width: 70%;
     float: left;
     text-align: left;
-    padding-left: 10px;
 }
 .top-panel__right {
     width: 30%;
@@ -1114,5 +1114,5 @@ body {
     left: 0;
 }
 .top-panel__right a{
-    color: #fff;
+    color: #c39367;
 }
