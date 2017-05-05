@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: home-page
+*/
+?>
 <?php get_header(); ?>
 <!-- new-->
 <div class="row">
@@ -88,7 +93,7 @@
 
 
                     </div>
-                    
+
                     <div class="row">
                         <div class="col-md-12">
                             <?php if ( is_active_sidebar( 'banners_block' ) ) : ?>
@@ -104,16 +109,15 @@
                         </div>
                     </div>
 
+
                     <div class="row">
                         <div class="col-md-12">
                             <?php
                             $mypage= get_page_by_title('Главная');
-                            if($mypage){
                             $mypage_id= $mypage->ID;
                             $post = get_post($mypage_id);
                             $content = $post->post_content;
                             echo $content;
-                            }
                             ?>
                         </div>
                     </div>
@@ -134,3 +138,4 @@
 
 
 <?php get_footer(); ?>
+
