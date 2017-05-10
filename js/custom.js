@@ -49,7 +49,8 @@
         $(document).ready(function () {
             var btnMobile = $('.mobile-menu img');
             var menu = $('#main-menu');
-            btnMobile.on('click',function(){
+            btnMobile.on('click',function(e){
+                e.preventDefault();
                 if(!menu.hasClass('open')){
                     menu.removeClass('close');
                     menu.addClass('open')

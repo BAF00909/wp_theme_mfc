@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-md-9 col-md-offset-3">
     <footer class="page-footer">
-            <div class="row clearfix" style="margin-right: 0;">
+            <div class="row mr-none clearfix">
                 <div class="col-md-4 pr-non">
                     <div class="bg-brown pl-15">
                         <p>﻿Техническая поддержка сайта</p>

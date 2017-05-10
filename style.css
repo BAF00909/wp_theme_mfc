@@ -634,138 +634,6 @@ p {
     margin-bottom: 60px;
 }
 
-
-
-
-
-@media only screen and (max-width: 375px) {
-    .logo-link {
-        /*margin: 24px 0 0 100px;*/
-        margin: 0;
-        text-align: right;
-    }
-    .slogan {
-        /* margin-right: 100px;*/
-        margin-right: 19px;
-        margin-bottom: 10px;
-    }
-    .bvi-block {
-        display: none;
-    }
-    .page-header__top-panel {
-        margin: 0;
-    }
-    .top-panel__info a {
-        white-space: nowrap;
-        display: block;
-        text-align: center;
-    }
-    .page-header-nav {
-        margin-bottom: 60px;
-    }
-    .main-menu {
-        display: none;
-    }
-    #main-menu .menu-item {
-        display: block;
-        margin-right: 0;
-    }
-    .mobile-menu img {
-        display: block;
-    }
-    #slider-wrap {
-        display: none;
-    }
-    .page-content {
-        padding-bottom: 10px;
-    }
-    .page-footer {
-        position: relative;
-    }
-    .page-footer__left-part {
-        display: none;
-    }
-    .page-footer__right-part {
-        width: 100%;
-    }
-    .page-footer__item {
-        width: 100%;
-        text-align: center;
-    }
-    .searchBtn {
-        right: 53px;
-    }
-    .social-menu {
-        padding-right: 46px;
-    }
-    .sidebar__contacts p {
-        margin-bottom: 20px;
-        white-space: pre-line;
-    }
-    .top-panel__info, .top-panel__info a {
-        white-space: nowrap;
-    }
-    .page-header__top-panel {
-        text-align: center;
-        padding: 6px 40px 6px 12px;
-    }
-    #main-menu .menu-item:after {
-        display: none;
-    }
-    .open {
-        display: block;
-    }
-    .close {
-        display: none;
-    }
-    .sidebar {
-        padding-right: 0;
-    }
-    .mini-menu .menu-item {
-        margin-right: 0;
-        display: block;
-        text-align: center;
-        background-color: #c39367;
-        margin-bottom: 0;
-        border-bottom: 1px solid #fff;
-        padding: 5px 0;
-    }
-    .mini-menu .menu-item a {
-        display: block;
-        text-align: center;
-        color: #fff;
-        text-decoration: none;
-        font-size: 18px;
-        line-height: 24px;
-        font-weight: normal;
-    }
-    .content-list {
-        padding-left: 16px;
-    }
-    .page-footer .version {
-        bottom: -30px;
-    }
-
-}
-@media only screen and (max-width: 768px) {
-    .slogan {
-        color: #f26649;
-        font-size: 12px;
-        line-height: 12px;
-        text-align: right;
-        margin-right: 20px;
-    }
-    .logo-link {
-        display: block;
-        margin: 0;
-        text-decoration: none;
-        text-align: right;
-    }
-    .page-footer .version {
-        bottom: -29px;
-    }
-}
-
 /*accordion*/
 .mini-menu .menu-item {
     margin-right: 0;
@@ -1088,11 +956,6 @@ img[class*="attachment-"],
 .nav-links .current {
     color: #623b2a;
 }
-@media (min-width: 1200px) {
-    .container {
-        width: 1200px;
-    }
-}
 .pr-non {
     padding-right: 0;
 }
@@ -1116,3 +979,175 @@ body {
 .top-panel__right a{
     color: #c39367;
 }
+.mr-none {
+    margin-right: 0;
+}
+
+
+
+@media only screen and (max-width: 375px) {
+    .logo-link {
+        /*margin: 24px 0 0 100px;*/
+        margin: 0;
+        text-align: right;
+    }
+    .slogan {
+        /* margin-right: 100px;*/
+        margin-right: 19px;
+        margin-bottom: 10px;
+    }
+    .bvi-block {
+        display: none;
+    }
+    .page-header__top-panel {
+        margin: 0;
+    }
+    .top-panel__info a {
+        white-space: nowrap;
+        display: block;
+        text-align: center;
+    }
+    .page-header-nav {
+        margin-bottom: 60px;
+    }
+    .main-menu {
+        display: none;
+    }
+    #main-menu .menu-item {
+        display: block;
+        margin-right: 0;
+    }
+    .mobile-menu img {
+        display: block;
+    }
+    #slider-wrap {
+        display: none;
+    }
+    .page-content {
+        padding-bottom: 10px;
+    }
+    .page-footer {
+        position: relative;
+    }
+    .page-footer__left-part {
+        display: none;
+    }
+    .page-footer__right-part {
+        width: 100%;
+    }
+    .page-footer__item {
+        width: 100%;
+        text-align: center;
+    }
+    .searchBtn {
+        right: 53px;
+    }
+    .social-menu {
+        padding-right: 46px;
+    }
+    .sidebar__contacts p {
+        margin-bottom: 20px;
+        white-space: pre-line;
+    }
+    .top-panel__info, .top-panel__info a {
+        white-space: nowrap;
+    }
+    .page-header__top-panel {
+        text-align: center;
+        padding: 6px 40px 6px 12px;
+    }
+    #main-menu .menu-item:after {
+        display: none;
+    }
+    .open {
+        display: block;
+    }
+    .close {
+        display: none;
+    }
+    .sidebar {
+        padding-right: 0;
+    }
+    .mini-menu .menu-item {
+        margin-right: 0;
+        display: block;
+        text-align: center;
+        background-color: #c39367;
+        margin-bottom: 0;
+        border-bottom: 1px solid #fff;
+        padding: 5px 0;
+    }
+    .mini-menu .menu-item a {
+        display: block;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: normal;
+    }
+    .content-list {
+        padding-left: 16px;
+    }
+    .page-footer .version {
+        bottom: -30px;
+    }
+    .bg-brown {
+        min-height: 0;
+    }
+    .pr-non {
+        background-color: #68412f;
+    }
+    .mr-none {
+        margin-right: -15px;
+    }
+
+}
+@media only screen and (max-width: 768px) {
+    .slogan {
+        color: #f26649;
+        font-size: 12px;
+        line-height: 12px;
+        text-align: right;
+        margin-right: 20px;
+    }
+    .logo-link {
+        display: block;
+        margin: 0;
+        text-decoration: none;
+        text-align: right;
+    }
+    .page-footer .version {
+        bottom: -29px;
+    }
+    .pr-non {
+        background-color: #68412f;
+    }
+    .footer-wrapper {
+        position: relative;
+    }
+    body {
+        padding-bottom: 0;
+    }
+    .bg-brown {
+        min-height: 0;
+    }
+    .mr-none {
+        margin-right: -15px;
+    }
+    .pl-15 {
+        padding-left: 0;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .bvi-panel-open {
+        font-size: 21px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+}
+

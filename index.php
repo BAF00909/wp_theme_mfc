@@ -56,7 +56,7 @@
                         <?php if (have_posts()) : ?>
                             <?php while (have_posts()) :  the_post();  ?>
 
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-4">
                                     <article class="news">
                                         <div class="image-news">
                                             <?php
