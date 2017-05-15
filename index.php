@@ -40,7 +40,7 @@
                     </div>
 
                 </header>
-                <section class="main-content">
+                <section class="main-content clearfix">
 
                     <div class="row clearfix">
                         <?php $catID = get_cat_ID( 'Новости' ); ?>
@@ -104,7 +104,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row clearfix home-inner">
                         <div class="col-md-12">
                             <?php
                             $mypage= get_page_by_title('Главная');
