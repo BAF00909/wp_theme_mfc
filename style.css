@@ -4,7 +4,7 @@ Description: тема для портала 'Мои документы'
 Author:  Netvox Lab
 Author URI: http://netvoxlab.com/
 Text Domain: mfc2017
-Version: 2017.05.15
+Version: 2017.05.31
 */
 
 @font-face {
@@ -985,7 +985,7 @@ body {
 .home-inner {
     margin: 0;
     margin-top: 20px;
-    background-color: #f6efe8;
+    /*background-color: #f6efe8;*/
     padding: 14px 0;
 }
 
